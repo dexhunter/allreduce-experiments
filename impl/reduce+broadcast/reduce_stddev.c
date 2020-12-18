@@ -1,12 +1,3 @@
-// Author: Wes Kendall
-// Copyright 2013 www.mpitutorial.com
-// This code is provided freely with the tutorials on mpitutorial.com. Feel
-// free to modify it for your own use. Any distribution of the code must
-// either provide a link to www.mpitutorial.com or keep this header intact.
-//
-// Program that computes the standard deviation of an array of elements in parallel using
-// MPI_Reduce.
-//
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
@@ -31,6 +22,7 @@ int main(int argc, char** argv) {
   }
 
   int num_elements_per_proc = atoi(argv[1]);
+  double total_reduce_time = 0.0;
 
   MPI_Init(NULL, NULL);
 
@@ -51,6 +43,7 @@ int main(int argc, char** argv) {
     local_sum += rand_nums[i];
   }
 
+  total_reduce_time -= MPI_Wtime();
   // Reduce all of the local sums into the global sum in order to
   // calculate the mean
   float global_sum;
@@ -69,6 +62,7 @@ int main(int argc, char** argv) {
   float global_sq_diff;
   MPI_Reduce(&local_sq_diff, &global_sq_diff, 1, MPI_FLOAT, MPI_SUM, 0,
              MPI_COMM_WORLD);
+  total_reduce_time += MPI_Wtime();
 
   // The standard deviation is the square root of the mean of the squared
   // differences.
@@ -76,6 +70,8 @@ int main(int argc, char** argv) {
     float stddev = sqrt(global_sq_diff /
                         (num_elements_per_proc * world_size));
     printf("Mean - %f, Standard deviation = %f\n", mean, stddev);
+    printf("Total allreduce time = %lf\n", total_reduce_time);
+
   }
 
   // Clean up

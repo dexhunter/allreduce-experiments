@@ -1,12 +1,3 @@
-// Author: Wes Kendall
-// Copyright 2013 www.mpitutorial.com
-// This code is provided freely with the tutorials on mpitutorial.com. Feel
-// free to modify it for your own use. Any distribution of the code must
-// either provide a link to www.mpitutorial.com or keep this header intact.
-//
-// Program that computes the average of an array of elements in parallel using
-// MPI_Reduce.
-//
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
@@ -31,6 +22,7 @@ int main(int argc, char** argv) {
   }
 
   int num_elements_per_proc = atoi(argv[1]);
+  double total_reduce_time = 0.0;
 
   MPI_Init(NULL, NULL);
 
@@ -54,16 +46,19 @@ int main(int argc, char** argv) {
   // Print the random numbers on each process
   printf("Local sum for process %d - %f, avg = %f\n",
          world_rank, local_sum, local_sum / num_elements_per_proc);
+  total_reduce_time -= MPI_Wtime();
 
   // Reduce all of the local sums into the global sum
   float global_sum;
   MPI_Reduce(&local_sum, &global_sum, 1, MPI_FLOAT, MPI_SUM, 0,
              MPI_COMM_WORLD);
+  total_reduce_time += MPI_Wtime();
 
   // Print the result
   if (world_rank == 0) {
     printf("Total sum = %f, avg = %f\n", global_sum,
            global_sum / (world_size * num_elements_per_proc));
+    printf("Total reduce time = %lf\n", total_reduce_time);
   }
 
   // Clean up
