@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# ignore omb
+osu-micro-benchmarks-5.7
+
+# ignore openmpi
+openmpi-4.1.0
