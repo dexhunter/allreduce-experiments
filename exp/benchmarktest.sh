@@ -3,9 +3,7 @@ mpirun --prefix <location of openmpi> -np <number of processes> -hostfile <dns o
 # example
 
 # ring algorithm
-mpirun --prefix <location of openmpi> -np 2 -hostfile <dns of servers> --mca coll_tuned_allreduce_algorithm 4 <location to omb>/osu-micro-benchmarks-5.7/mpi/collective/osu_allreduce
-mpirun --prefix <location of openmpi> -np 4 -hostfile <dns of servers> --mca coll_tuned_allreduce_algorithm 4 <location to omb>/osu-micro-benchmarks-5.7/mpi/collective/osu_allreduce
-mpirun --prefix <location of openmpi> -np 8 -hostfile <dns of servers> --mca coll_tuned_allreduce_algorithm 4 <location to omb>/osu-micro-benchmarks-5.7/mpi/collective/osu_allreduce
-mpirun --prefix <location of openmpi> -np 16 -hostfile <dns of servers> --mca coll_tuned_allreduce_algorithm 4 <location to omb>/osu-micro-benchmarks-5.7/mpi/collective/osu_allreduce
-mpirun --prefix <location of openmpi> -np 32 -hostfile <dns of servers> --mca coll_tuned_allreduce_algorithm 4 <location to omb>/osu-micro-benchmarks-5.7/mpi/collective/osu_allreduce
-
+# message size up to 512MB
+# force using eth0 interface
+# debug mode
+mpirun --prefix <location of openmpi> -np <number of processes> -hostfile <dns of servers> --mca btl_tcp_if_include 192.168.0.1/24 --mca orte_base_help_aggregate 0 --mca coll_tuned_allreduce_algorithm 4 <location to omb>/mpi/collective/osu_allreduce -m 536870912
