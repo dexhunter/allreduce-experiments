@@ -1,0 +1,6 @@
+
+# OSU MPI Allreduce Latency Test v5.7
+# Size       Avg Latency(us)
+1000000             42203.05
+5000000             94409.82
+9000000            115756.76

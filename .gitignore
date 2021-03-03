@@ -195,3 +195,9 @@ osu-micro-benchmarks-5.7
 
 # ignore openmpi
 openmpi-4.1.0
+
+# ignore gloo
+gloo
+
+# ignore horovod
+horovod
