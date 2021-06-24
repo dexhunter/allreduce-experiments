@@ -1,0 +1,822 @@
+# nThread 1 nGpus 1 minBytes 1048576 maxBytes 536870912 step: 1048576(bytes) warmup iters: 5 iters: 20 validation: 1 
+#
+# Using devices
+#   Rank  0 Pid  37400 on      node1 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank  1 Pid  37401 on      node1 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank  2 Pid  37402 on      node1 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank  3 Pid  37403 on      node1 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank  4 Pid 143315 on      node2 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank  5 Pid 143316 on      node2 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank  6 Pid 143317 on      node2 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank  7 Pid 143318 on      node2 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank  8 Pid  62695 on      node3 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank  9 Pid  62696 on      node3 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 10 Pid  62697 on      node3 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 11 Pid  62698 on      node3 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank 12 Pid 101870 on       gpu4 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank 13 Pid 101871 on       gpu4 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 14 Pid 101872 on       gpu4 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 15 Pid 101873 on       gpu4 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank 16 Pid   7908 on       gpu5 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank 17 Pid   7909 on       gpu5 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 18 Pid   7910 on       gpu5 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 19 Pid   7911 on       gpu5 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank 20 Pid  17258 on       gpu6 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank 21 Pid  17259 on       gpu6 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 22 Pid  17260 on       gpu6 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 23 Pid  17261 on       gpu6 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank 24 Pid  16438 on       gpu7 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank 25 Pid  16439 on       gpu7 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 26 Pid  16440 on       gpu7 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 27 Pid  16441 on       gpu7 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank 28 Pid   8954 on       gpu8 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank 29 Pid   8955 on       gpu8 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 30 Pid   8956 on       gpu8 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 31 Pid   8957 on       gpu8 device  3 [0xb2] GeForce RTX 2080 Ti
+node1:37400:37400 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.11<0>
+node1:37400:37400 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node1:37400:37400 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.11<0>
+node2:143316:143316 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.12<0>
+node2:143315:143315 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.12<0>
+gpu4:101872:101872 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.14<0>
+node2:143316:143316 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node2:143318:143318 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.12<0>
+gpu4:101872:101872 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node2:143315:143315 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node2:143317:143317 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.12<0>
+node2:143318:143318 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node2:143317:143317 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu4:101870:101870 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.14<0>
+gpu4:101871:101871 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.14<0>
+gpu4:101870:101870 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu4:101873:101873 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.14<0>
+gpu4:101872:101872 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.14<0>
+gpu4:101871:101871 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu4:101873:101873 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node2:143316:143316 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.12<0>
+node2:143317:143317 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.12<0>
+node2:143315:143315 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.12<0>
+node2:143318:143318 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.12<0>
+gpu4:101870:101870 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.14<0>
+gpu4:101873:101873 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.14<0>
+gpu4:101871:101871 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.14<0>
+gpu8:8956:8956 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.18<0>
+gpu8:8956:8956 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu8:8955:8955 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.18<0>
+gpu8:8957:8957 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.18<0>
+gpu8:8955:8955 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu8:8954:8954 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.18<0>
+gpu8:8954:8954 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu8:8957:8957 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu8:8955:8955 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.18<0>
+gpu8:8954:8954 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.18<0>
+gpu8:8957:8957 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.18<0>
+node3:62697:62697 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.13<0>
+node3:62697:62697 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu7:16439:16439 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.17<0>
+gpu7:16440:16440 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.17<0>
+gpu7:16439:16439 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu7:16440:16440 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu7:16438:16438 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.17<0>
+gpu7:16438:16438 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu7:16441:16441 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.17<0>
+gpu7:16441:16441 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node3:62697:62697 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.13<0>
+node3:62695:62695 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.13<0>
+node3:62698:62698 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.13<0>
+node3:62695:62695 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node3:62696:62696 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.13<0>
+node3:62698:62698 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node3:62696:62696 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu8:8956:8956 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.18<0>
+node3:62696:62696 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.13<0>
+node3:62698:62698 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.13<0>
+node3:62695:62695 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.13<0>
+gpu7:16438:16438 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.17<0>
+gpu7:16439:16439 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.17<0>
+gpu7:16441:16441 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.17<0>
+gpu7:16440:16440 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.17<0>
+gpu6:17261:17261 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.16<0>
+gpu6:17261:17261 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu6:17258:17258 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.16<0>
+gpu6:17259:17259 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.16<0>
+gpu6:17258:17258 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu6:17259:17259 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu6:17260:17260 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.16<0>
+gpu6:17260:17260 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu6:17259:17259 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.16<0>
+gpu6:17258:17258 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.16<0>
+gpu6:17260:17260 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.16<0>
+gpu6:17261:17261 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.16<0>
+NCCL version 2.4.7+cuda10.1
+gpu5:7911:7911 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.15<0>
+gpu5:7911:7911 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu4:101872:101951 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu4:101872:101951 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node1:37402:37402 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.11<0>
+node1:37401:37401 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.11<0>
+node1:37402:37402 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node1:37401:37401 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu5:7910:7910 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.15<0>
+gpu5:7910:7910 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node1:37403:37403 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.11<0>
+gpu5:7909:7909 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.15<0>
+node1:37403:37403 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu5:7909:7909 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu5:7908:7908 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.15<0>
+gpu5:7908:7908 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+gpu5:7910:7910 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.15<0>
+gpu5:7909:7909 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.15<0>
+node1:37403:37403 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.11<0>
+node1:37402:37402 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.11<0>
+gpu5:7908:7908 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.15<0>
+node1:37401:37401 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.11<0>
+node3:62697:62758 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+node3:62697:62758 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu5:7911:7911 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.15<0>
+node3:62698:62759 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+node3:62698:62759 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node3:62695:62760 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+node3:62695:62760 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node3:62696:62761 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+node3:62696:62761 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node2:143318:143395 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+gpu4:101873:101954 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+gpu4:101873:101954 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu4:101870:101952 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+gpu4:101871:101953 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+node2:143318:143395 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu4:101871:101953 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu4:101870:101952 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node2:143317:143397 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+node2:143316:143394 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+node2:143317:143397 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node2:143315:143396 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+node2:143316:143394 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node2:143315:143396 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu7:16438:16515 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+gpu7:16438:16515 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu7:16440:16517 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu7:16440:16517 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu7:16439:16516 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+gpu7:16439:16516 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu7:16441:16518 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+gpu7:16441:16518 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu8:8955:9038 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+gpu8:8955:9038 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu8:8957:9037 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+gpu8:8956:9036 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu8:8954:9039 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+gpu8:8954:9039 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu8:8956:9036 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu8:8957:9037 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu6:17260:17335 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu6:17260:17335 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu6:17258:17336 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+gpu6:17258:17336 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu6:17259:17337 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+gpu6:17259:17337 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu6:17261:17338 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+gpu6:17261:17338 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu5:7909:7985 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+gpu5:7909:7985 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu5:7908:7984 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+gpu5:7908:7984 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu5:7910:7986 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu5:7910:7986 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu5:7911:7987 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+gpu5:7911:7987 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node1:37400:37502 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+node1:37400:37502 [0] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node1:37402:37501 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+node1:37402:37501 [2] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node1:37403:37503 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+node1:37401:37504 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+node1:37401:37504 [1] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+node1:37403:37503 [3] NCCL INFO NCCL_TREE_THRESHOLD set by environment to 0.
+gpu5:7911:7987 [3] NCCL INFO CUDA Dev 3[3], IB NIC distance :  NODE
+gpu5:7910:7986 [2] NCCL INFO CUDA Dev 2[2], IB NIC distance :  NODE
+gpu4:101873:101954 [3] NCCL INFO CUDA Dev 3[3], IB NIC distance :  NODE
+gpu4:101872:101951 [2] NCCL INFO CUDA Dev 2[2], IB NIC distance :  NODE
+gpu6:17259:17337 [1] NCCL INFO CUDA Dev 1[1], IB NIC distance :  SYS
+gpu6:17260:17335 [2] NCCL INFO CUDA Dev 2[2], IB NIC distance :  NODE
+gpu5:7909:7985 [1] NCCL INFO CUDA Dev 1[1], IB NIC distance :  SYS
+gpu6:17258:17336 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SYS
+gpu5:7908:7984 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SYS
+gpu6:17261:17338 [3] NCCL INFO CUDA Dev 3[3], IB NIC distance :  NODE
+gpu7:16441:16518 [3] NCCL INFO CUDA Dev 3[3], IB NIC distance :  NODE
+gpu4:101871:101953 [1] NCCL INFO CUDA Dev 1[1], IB NIC distance :  SYS
+gpu4:101870:101952 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SYS
+node3:62698:62759 [3] NCCL INFO CUDA Dev 3[3], IB NIC distance :  NODE
+node3:62697:62758 [2] NCCL INFO CUDA Dev 2[2], IB NIC distance :  NODE
+gpu8:8954:9039 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SYS
+node2:143317:143397 [2] NCCL INFO CUDA Dev 2[2], IB NIC distance :  NODE
+node2:143318:143395 [3] NCCL INFO CUDA Dev 3[3], IB NIC distance :  NODE
+node1:37403:37503 [3] NCCL INFO CUDA Dev 3[3], IB NIC distance :  NODE
+gpu7:16439:16516 [1] NCCL INFO CUDA Dev 1[1], IB NIC distance :  SYS
+node1:37401:37504 [1] NCCL INFO CUDA Dev 1[1], IB NIC distance :  SYS
+gpu7:16440:16517 [2] NCCL INFO CUDA Dev 2[2], IB NIC distance :  NODE
+gpu7:16438:16515 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SYS
+gpu8:8956:9036 [2] NCCL INFO CUDA Dev 2[2], IB NIC distance :  NODE
+node2:143316:143394 [1] NCCL INFO CUDA Dev 1[1], IB NIC distance :  SYS
+node3:62695:62760 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SYS
+node2:143315:143396 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SYS
+node3:62696:62761 [1] NCCL INFO CUDA Dev 1[1], IB NIC distance :  SYS
+gpu8:8957:9037 [3] NCCL INFO CUDA Dev 3[3], IB NIC distance :  NODE
+gpu8:8955:9038 [1] NCCL INFO CUDA Dev 1[1], IB NIC distance :  SYS
+node1:37400:37502 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SYS
+node1:37402:37501 [2] NCCL INFO CUDA Dev 2[2], IB NIC distance :  NODE
+node1:37400:37502 [0] NCCL INFO Channel 00 :    0   1   3   6   4   5   7  10   8   9  11  14  12  13  15  18  16  17  19  22
+node3:62697:62758 [2] NCCL INFO Ring 00 : 7 -> 10 [receive] via NET/IB/0
+node2:143317:143397 [2] NCCL INFO Ring 00 : 3 -> 6 [receive] via NET/IB/0
+node3:62697:62758 [2] NCCL INFO Ring 00 : 10[2] -> 8[0] via direct shared memory
+node2:143317:143397 [2] NCCL INFO Ring 00 : 6[2] -> 4[0] via direct shared memory
+gpu8:8956:9036 [2] NCCL INFO Ring 00 : 27 -> 30 [receive] via NET/IB/0
+gpu6:17260:17335 [2] NCCL INFO Ring 00 : 19 -> 22 [receive] via NET/IB/0
+gpu5:7910:7986 [2] NCCL INFO Ring 00 : 15 -> 18 [receive] via NET/IB/0
+gpu4:101871:101953 [1] NCCL INFO Ring 00 : 13[1] -> 15[3] via direct shared memory
+node2:143315:143396 [0] NCCL INFO Ring 00 : 4[0] -> 5[1] via direct shared memory
+gpu8:8956:9036 [2] NCCL INFO Ring 00 : 30[2] -> 28[0] via direct shared memory
+gpu6:17260:17335 [2] NCCL INFO Ring 00 : 22[2] -> 20[0] via direct shared memory
+node3:62696:62761 [1] NCCL INFO Ring 00 : 9[1] -> 11[3] via direct shared memory
+node3:62695:62760 [0] NCCL INFO Ring 00 : 8[0] -> 9[1] via direct shared memory
+gpu7:16440:16517 [2] NCCL INFO Ring 00 : 23 -> 26 [receive] via NET/IB/0
+gpu5:7910:7986 [2] NCCL INFO Ring 00 : 18[2] -> 16[0] via direct shared memory
+gpu7:16440:16517 [2] NCCL INFO Ring 00 : 26[2] -> 24[0] via direct shared memory
+node1:37402:37501 [2] NCCL INFO Ring 00 : 31 -> 2 [receive] via NET/IB/0
+gpu6:17259:17337 [1] NCCL INFO Ring 00 : 21[1] -> 23[3] via direct shared memory
+gpu4:101872:101951 [2] NCCL INFO Ring 00 : 11 -> 14 [receive] via NET/IB/0
+gpu6:17258:17336 [0] NCCL INFO Ring 00 : 20[0] -> 21[1] via direct shared memory
+gpu4:101870:101952 [0] NCCL INFO Ring 00 : 12[0] -> 13[1] via direct shared memory
+node2:143316:143394 [1] NCCL INFO Ring 00 : 5[1] -> 7[3] via direct shared memory
+node1:37402:37501 [2] NCCL INFO Ring 00 : 2[2] -> 0[0] via direct shared memory
+gpu7:16439:16516 [1] NCCL INFO Ring 00 : 25[1] -> 27[3] via direct shared memory
+gpu4:101872:101951 [2] NCCL INFO Ring 00 : 14[2] -> 12[0] via direct shared memory
+gpu7:16438:16515 [0] NCCL INFO Ring 00 : 24[0] -> 25[1] via direct shared memory
+gpu5:7908:7984 [0] NCCL INFO Ring 00 : 16[0] -> 17[1] via direct shared memory
+gpu5:7909:7985 [1] NCCL INFO Ring 00 : 17[1] -> 19[3] via direct shared memory
+node3:62696:62761 [1] NCCL INFO comm 0x7f975c0018b0 rank 9 nranks 32 cudaDev 1 nvmlDev 1 - Init COMPLETE
+node3:62695:62760 [0] NCCL INFO comm 0x7f2d000018b0 rank 8 nranks 32 cudaDev 0 nvmlDev 0 - Init COMPLETE
+node1:37401:37504 [1] NCCL INFO Ring 00 : 1[1] -> 3[3] via direct shared memory
+gpu8:8954:9039 [0] NCCL INFO Ring 00 : 28[0] -> 29[1] via direct shared memory
+gpu8:8955:9038 [1] NCCL INFO Ring 00 : 29[1] -> 31[3] via direct shared memory
+node2:143315:143396 [0] NCCL INFO comm 0x7f35d00018b0 rank 4 nranks 32 cudaDev 0 nvmlDev 0 - Init COMPLETE
+node1:37400:37502 [0] NCCL INFO Ring 00 : 0[0] -> 1[1] via direct shared memory
+gpu4:101871:101953 [1] NCCL INFO comm 0x7f97300018b0 rank 13 nranks 32 cudaDev 1 nvmlDev 1 - Init COMPLETE
+node3:62698:62759 [3] NCCL INFO Ring 00 : 11 -> 14 [send] via NET/IB/0
+node2:143318:143395 [3] NCCL INFO Ring 00 : 7 -> 10 [send] via NET/IB/0
+gpu4:101873:101954 [3] NCCL INFO Ring 00 : 15 -> 18 [send] via NET/IB/0
+gpu6:17259:17337 [1] NCCL INFO comm 0x7f3f880018b0 rank 21 nranks 32 cudaDev 1 nvmlDev 1 - Init COMPLETE
+gpu6:17258:17336 [0] NCCL INFO comm 0x7fdf7c0018b0 rank 20 nranks 32 cudaDev 0 nvmlDev 0 - Init COMPLETE
+node1:37400:37502 [0] NCCL INFO Using 256 threads, Min Comp Cap 7, Trees disabled
+gpu7:16439:16516 [1] NCCL INFO comm 0x7f53a00018b0 rank 25 nranks 32 cudaDev 1 nvmlDev 1 - Init COMPLETE
+gpu7:16438:16515 [0] NCCL INFO comm 0x7fee880018b0 rank 24 nranks 32 cudaDev 0 nvmlDev 0 - Init COMPLETE
+gpu7:16441:16518 [3] NCCL INFO Ring 00 : 27 -> 30 [send] via NET/IB/0
+gpu8:8957:9037 [3] NCCL INFO Ring 00 : 31 -> 2 [send] via NET/IB/0
+gpu6:17261:17338 [3] NCCL INFO Ring 00 : 23 -> 26 [send] via NET/IB/0
+gpu5:7908:7984 [0] NCCL INFO comm 0x7f5ea40018b0 rank 16 nranks 32 cudaDev 0 nvmlDev 0 - Init COMPLETE
+gpu5:7909:7985 [1] NCCL INFO comm 0x7fb65c0018b0 rank 17 nranks 32 cudaDev 1 nvmlDev 1 - Init COMPLETE
+gpu8:8954:9039 [0] NCCL INFO comm 0x7f30800018b0 rank 28 nranks 32 cudaDev 0 nvmlDev 0 - Init COMPLETE
+gpu8:8955:9038 [1] NCCL INFO comm 0x7f87940018b0 rank 29 nranks 32 cudaDev 1 nvmlDev 1 - Init COMPLETE
+node1:37403:37503 [3] NCCL INFO Ring 00 : 3 -> 6 [send] via NET/IB/0
+node3:62698:62759 [3] NCCL INFO comm 0x7fd2340018b0 rank 11 nranks 32 cudaDev 3 nvmlDev 3 - Init COMPLETE
+gpu4:101870:101952 [0] NCCL INFO comm 0x7f4d7c0018b0 rank 12 nranks 32 cudaDev 0 nvmlDev 0 - Init COMPLETE
+node1:37401:37504 [1] NCCL INFO comm 0x7f7bb00018b0 rank 1 nranks 32 cudaDev 1 nvmlDev 1 - Init COMPLETE
+node1:37400:37502 [0] NCCL INFO comm 0x7fa5680018b0 rank 0 nranks 32 cudaDev 0 nvmlDev 0 - Init COMPLETE
+gpu5:7911:7987 [3] NCCL INFO Ring 00 : 19 -> 22 [send] via NET/IB/0
+gpu4:101873:101954 [3] NCCL INFO comm 0x7fb5280018b0 rank 15 nranks 32 cudaDev 3 nvmlDev 3 - Init COMPLETE
+node3:62697:62758 [2] NCCL INFO comm 0x7f22040018b0 rank 10 nranks 32 cudaDev 2 nvmlDev 2 - Init COMPLETE
+node2:143316:143394 [1] NCCL INFO comm 0x7f3cb80018b0 rank 5 nranks 32 cudaDev 1 nvmlDev 1 - Init COMPLETE
+#
+#                                                     out-of-place                       in-place          
+#       size         count    type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                     (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+node1:37400:37400 [0] NCCL INFO Launch mode Parallel
+gpu5:7910:7986 [2] NCCL INFO comm 0x7f3c100018b0 rank 18 nranks 32 cudaDev 2 nvmlDev 2 - Init COMPLETE
+gpu4:101872:101951 [2] NCCL INFO comm 0x7fbd680018b0 rank 14 nranks 32 cudaDev 2 nvmlDev 2 - Init COMPLETE
+gpu6:17261:17338 [3] NCCL INFO comm 0x7f75480018b0 rank 23 nranks 32 cudaDev 3 nvmlDev 3 - Init COMPLETE
+gpu7:16441:16518 [3] NCCL INFO comm 0x7f8c680018b0 rank 27 nranks 32 cudaDev 3 nvmlDev 3 - Init COMPLETE
+gpu8:8957:9037 [3] NCCL INFO comm 0x7f5f9c0018b0 rank 31 nranks 32 cudaDev 3 nvmlDev 3 - Init COMPLETE
+gpu8:8956:9036 [2] NCCL INFO comm 0x7f79340018b0 rank 30 nranks 32 cudaDev 2 nvmlDev 2 - Init COMPLETE
+node2:143318:143395 [3] NCCL INFO comm 0x7fcd640018b0 rank 7 nranks 32 cudaDev 3 nvmlDev 3 - Init COMPLETE
+node1:37402:37501 [2] NCCL INFO comm 0x7f4fb40018b0 rank 2 nranks 32 cudaDev 2 nvmlDev 2 - Init COMPLETE
+gpu5:7911:7987 [3] NCCL INFO comm 0x7f738c0018b0 rank 19 nranks 32 cudaDev 3 nvmlDev 3 - Init COMPLETE
+node2:143317:143397 [2] NCCL INFO comm 0x7f93300018b0 rank 6 nranks 32 cudaDev 2 nvmlDev 2 - Init COMPLETE
+node1:37403:37503 [3] NCCL INFO comm 0x7f80880018b0 rank 3 nranks 32 cudaDev 3 nvmlDev 3 - Init COMPLETE
+gpu6:17260:17335 [2] NCCL INFO comm 0x7f12380018b0 rank 22 nranks 32 cudaDev 2 nvmlDev 2 - Init COMPLETE
+gpu7:16440:16517 [2] NCCL INFO comm 0x7f23580018b0 rank 26 nranks 32 cudaDev 2 nvmlDev 2 - Init COMPLETE
+     1048576        262144   float     sum   2258.2    0.46    0.90  1e-06   1964.1    0.53    1.03  1e-06
+     2097152        524288   float     sum   1162.4    1.80    3.50  1e-06   1162.0    1.80    3.50  1e-06
+     3145728        786432   float     sum   1539.1    2.04    3.96  1e-06   1539.4    2.04    3.96  1e-06
+     4194304       1048576   float     sum   1940.0    2.16    4.19  1e-06   1936.9    2.17    4.20  1e-06
+     5242880       1310720   float     sum   2304.5    2.28    4.41  1e-06   2302.8    2.28    4.41  1e-06
+     6291456       1572864   float     sum   2662.3    2.36    4.58  1e-06   2669.2    2.36    4.57  1e-06
+     7340032       1835008   float     sum   3025.1    2.43    4.70  1e-06   3023.5    2.43    4.70  1e-06
+     8388608       2097152   float     sum   3390.7    2.47    4.79  1e-06   3390.2    2.47    4.79  1e-06
+     9437184       2359296   float     sum   3765.8    2.51    4.86  1e-06   3762.2    2.51    4.86  1e-06
+    10485760       2621440   float     sum   4352.2    2.41    4.67  1e-06   4126.7    2.54    4.92  1e-06
+    11534336       2883584   float     sum   4523.5    2.55    4.94  1e-06   4514.8    2.55    4.95  1e-06
+    12582912       3145728   float     sum   4901.6    2.57    4.97  1e-06   4905.9    2.56    4.97  1e-06
+    13631488       3407872   float     sum   5263.5    2.59    5.02  1e-06   5274.2    2.58    5.01  1e-06
+    14680064       3670016   float     sum   5646.2    2.60    5.04  1e-06   5770.6    2.54    4.93  1e-06
+    15728640       3932160   float     sum   6019.2    2.61    5.06  1e-06   6015.9    2.61    5.07  1e-06
+    16777216       4194304   float     sum   6403.1    2.62    5.08  1e-06   6386.9    2.63    5.09  1e-06
+    17825792       4456448   float     sum   6768.7    2.63    5.10  1e-06   6765.8    2.63    5.10  1e-06
+    18874368       4718592   float     sum   7149.7    2.64    5.11  1e-06   7142.8    2.64    5.12  1e-06
+    19922944       4980736   float     sum   7518.3    2.65    5.13  1e-06   7523.6    2.65    5.13  1e-06
+    20971520       5242880   float     sum   7900.1    2.65    5.14  1e-06   7892.8    2.66    5.15  1e-06
+    22020096       5505024   float     sum   8392.3    2.62    5.08  1e-06   8281.1    2.66    5.15  1e-06
+    23068672       5767168   float     sum   8654.8    2.67    5.16  1e-06   8652.1    2.67    5.17  1e-06
+    24117248       6029312   float     sum   9031.4    2.67    5.17  1e-06   9036.3    2.67    5.17  1e-06
+    25165824       6291456   float     sum   9431.5    2.67    5.17  1e-06   9407.3    2.68    5.18  1e-06
+    26214400       6553600   float     sum   9787.9    2.68    5.19  1e-06   9788.0    2.68    5.19  1e-06
+    27262976       6815744   float     sum    10175    2.68    5.19  1e-06    10173    2.68    5.19  1e-06
+    28311552       7077888   float     sum    10626    2.66    5.16  1e-06    10536    2.69    5.21  1e-06
+    29360128       7340032   float     sum    10927    2.69    5.21  1e-06    10978    2.67    5.18  1e-06
+    30408704       7602176   float     sum    11308    2.69    5.21  1e-06    11307    2.69    5.21  1e-06
+    31457280       7864320   float     sum    11691    2.69    5.21  1e-06    11685    2.69    5.22  1e-06
+    32505856       8126464   float     sum    12065    2.69    5.22  1e-06    12108    2.68    5.20  1e-06
+    33554432       8388608   float     sum    12495    2.69    5.20  1e-06    12475    2.69    5.21  1e-06
+    34603008       8650752   float     sum    12802    2.70    5.24  1e-06    12806    2.70    5.24  1e-06
+    35651584       8912896   float     sum    13061    2.73    5.29  1e-06    13063    2.73    5.29  1e-06
+    36700160       9175040   float     sum    13358    2.75    5.32  1e-06    13356    2.75    5.32  1e-06
+    37748736       9437184   float     sum    13664    2.76    5.35  1e-06    13664    2.76    5.35  1e-06
+    38797312       9699328   float     sum    13995    2.77    5.37  1e-06    14034    2.76    5.36  1e-06
+    39845888       9961472   float     sum    14360    2.77    5.38  1e-06    14341    2.78    5.38  1e-06
+    40894464      10223616   float     sum    14750    2.77    5.37  1e-06    14728    2.78    5.38  1e-06
+    41943040      10485760   float     sum    15119    2.77    5.37  1e-06    15075    2.78    5.39  1e-06
+    42991616      10747904   float     sum    15459    2.78    5.39  1e-06    15435    2.79    5.40  1e-06
+    44040192      11010048   float     sum    15817    2.78    5.39  1e-06    15806    2.79    5.40  1e-06
+    45088768      11272192   float     sum    16217    2.78    5.39  1e-06    16218    2.78    5.39  1e-06
+    46137344      11534336   float     sum    16592    2.78    5.39  1e-06    16623    2.78    5.38  1e-06
+    47185920      11796480   float     sum    16924    2.79    5.40  1e-06    16985    2.78    5.38  1e-06
+    48234496      12058624   float     sum    17302    2.79    5.40  1e-06    17298    2.79    5.40  1e-06
+    49283072      12320768   float     sum    17701    2.78    5.39  1e-06    17716    2.78    5.39  1e-06
+    50331648      12582912   float     sum    18056    2.79    5.40  1e-06    18103    2.78    5.39  1e-06
+    51380224      12845056   float     sum    18437    2.79    5.40  1e-06    18483    2.78    5.39  1e-06
+    52428800      13107200   float     sum    18811    2.79    5.40  1e-06    18844    2.78    5.39  1e-06
+    53477376      13369344   float     sum    19217    2.78    5.39  1e-06    19225    2.78    5.39  1e-06
+    54525952      13631488   float     sum    19602    2.78    5.39  1e-06    19614    2.78    5.39  1e-06
+    55574528      13893632   float     sum    19950    2.79    5.40  1e-06    19949    2.79    5.40  1e-06
+    56623104      14155776   float     sum    20296    2.79    5.41  1e-06    20290    2.79    5.41  1e-06
+    57671680      14417920   float     sum    20677    2.79    5.40  1e-06    20694    2.79    5.40  1e-06
+    58720256      14680064   float     sum    21050    2.79    5.40  1e-06    21035    2.79    5.41  1e-06
+    59768832      14942208   float     sum    21408    2.79    5.41  1e-06    21370    2.80    5.42  1e-06
+    60817408      15204352   float     sum    21787    2.79    5.41  1e-06    21794    2.79    5.41  1e-06
+    61865984      15466496   float     sum    22117    2.80    5.42  1e-06    22149    2.79    5.41  1e-06
+    62914560      15728640   float     sum    22470    2.80    5.42  1e-06    22531    2.79    5.41  1e-06
+    63963136      15990784   float     sum    22920    2.79    5.41  1e-06    22909    2.79    5.41  1e-06
+    65011712      16252928   float     sum    23284    2.79    5.41  1e-06    23251    2.80    5.42  1e-06
+    66060288      16515072   float     sum    23721    2.78    5.40  1e-06    23634    2.80    5.42  1e-06
+    67108864      16777216   float     sum    24011    2.79    5.42  1e-06    23992    2.80    5.42  1e-06
+    68157440      17039360   float     sum    24841    2.74    5.32  1e-06    24831    2.74    5.32  1e-06
+    69206016      17301504   float     sum    25186    2.75    5.32  1e-06    25188    2.75    5.32  1e-06
+    70254592      17563648   float     sum    25575    2.75    5.32  1e-06    25558    2.75    5.33  1e-06
+    71303168      17825792   float     sum    25954    2.75    5.32  1e-06    25984    2.74    5.32  1e-06
+    72351744      18087936   float     sum    26327    2.75    5.32  1e-06    26316    2.75    5.33  1e-06
+    73400320      18350080   float     sum    26673    2.75    5.33  1e-06    26683    2.75    5.33  1e-06
+    74448896      18612224   float     sum    27047    2.75    5.33  1e-06    27047    2.75    5.33  1e-06
+    75497472      18874368   float     sum    27437    2.75    5.33  1e-06    27427    2.75    5.33  1e-06
+    76546048      19136512   float     sum    27792    2.75    5.34  1e-06    27799    2.75    5.34  1e-06
+    77594624      19398656   float     sum    28160    2.76    5.34  1e-06    28158    2.76    5.34  1e-06
+    78643200      19660800   float     sum    28536    2.76    5.34  1e-06    28536    2.76    5.34  1e-06
+    79691776      19922944   float     sum    28918    2.76    5.34  1e-06    28913    2.76    5.34  1e-06
+    80740352      20185088   float     sum    29286    2.76    5.34  1e-06    29278    2.76    5.34  1e-06
+    81788928      20447232   float     sum    29665    2.76    5.34  1e-06    29656    2.76    5.34  1e-06
+    82837504      20709376   float     sum    30038    2.76    5.34  1e-06    30024    2.76    5.35  1e-06
+    83886080      20971520   float     sum    30396    2.76    5.35  1e-06    30408    2.76    5.34  1e-06
+    84934656      21233664   float     sum    30788    2.76    5.34  1e-06    30778    2.76    5.35  1e-06
+    85983232      21495808   float     sum    31207    2.76    5.34  1e-06    31150    2.76    5.35  1e-06
+    87031808      21757952   float     sum    31520    2.76    5.35  1e-06    31523    2.76    5.35  1e-06
+    88080384      22020096   float     sum    31889    2.76    5.35  1e-06    31904    2.76    5.35  1e-06
+    89128960      22282240   float     sum    32276    2.76    5.35  1e-06    32275    2.76    5.35  1e-06
+    90177536      22544384   float     sum    32648    2.76    5.35  1e-06    32658    2.76    5.35  1e-06
+    91226112      22806528   float     sum    33013    2.76    5.35  1e-06    33052    2.76    5.35  1e-06
+    92274688      23068672   float     sum    33387    2.76    5.35  1e-06    33390    2.76    5.35  1e-06
+    93323264      23330816   float     sum    33767    2.76    5.35  1e-06    33775    2.76    5.35  1e-06
+    94371840      23592960   float     sum    34152    2.76    5.35  1e-06    34162    2.76    5.35  1e-06
+    95420416      23855104   float     sum    34530    2.76    5.35  1e-06    34526    2.76    5.35  1e-06
+    96468992      24117248   float     sum    34905    2.76    5.35  1e-06    34907    2.76    5.35  1e-06
+    97517568      24379392   float     sum    35279    2.76    5.36  1e-06    35283    2.76    5.35  1e-06
+    98566144      24641536   float     sum    35667    2.76    5.35  1e-06    35667    2.76    5.35  1e-06
+    99614720      24903680   float     sum    36034    2.76    5.36  1e-06    36032    2.76    5.36  1e-06
+   100663296      25165824   float     sum    36421    2.76    5.36  1e-06    36413    2.76    5.36  1e-06
+   101711872      25427968   float     sum    36772    2.77    5.36  1e-06    36770    2.77    5.36  1e-06
+   102760448      25690112   float     sum    37023    2.78    5.38  1e-06    37024    2.78    5.38  1e-06
+   103809024      25952256   float     sum    37333    2.78    5.39  1e-06    37325    2.78    5.39  1e-06
+   104857600      26214400   float     sum    37655    2.78    5.40  1e-06    37672    2.78    5.39  1e-06
+   105906176      26476544   float     sum    38013    2.79    5.40  1e-06    38008    2.79    5.40  1e-06
+   106954752      26738688   float     sum    38375    2.79    5.40  1e-06    38396    2.79    5.40  1e-06
+   108003328      27000832   float     sum    38735    2.79    5.40  1e-06    38734    2.79    5.40  1e-06
+   109051904      27262976   float     sum    39102    2.79    5.40  1e-06    39100    2.79    5.40  1e-06
+   110100480      27525120   float     sum    39456    2.79    5.41  1e-06    39471    2.79    5.40  1e-06
+   111149056      27787264   float     sum    39848    2.79    5.40  1e-06    39797    2.79    5.41  1e-06
+   112197632      28049408   float     sum    40214    2.79    5.41  1e-06    40224    2.79    5.40  1e-06
+   113246208      28311552   float     sum    40550    2.79    5.41  1e-06    40543    2.79    5.41  1e-06
+   114294784      28573696   float     sum    40945    2.79    5.41  1e-06    40990    2.79    5.40  1e-06
+   115343360      28835840   float     sum    41318    2.79    5.41  1e-06    41314    2.79    5.41  1e-06
+   116391936      29097984   float     sum    41654    2.79    5.41  1e-06    41685    2.79    5.41  1e-06
+   117440512      29360128   float     sum    42003    2.80    5.42  1e-06    42042    2.79    5.41  1e-06
+   118489088      29622272   float     sum    42396    2.79    5.41  1e-06    42396    2.79    5.41  1e-06
+   119537664      29884416   float     sum    42755    2.80    5.42  1e-06    42776    2.79    5.41  1e-06
+   120586240      30146560   float     sum    43173    2.79    5.41  1e-06    43151    2.79    5.41  1e-06
+   121634816      30408704   float     sum    43538    2.79    5.41  1e-06    43477    2.80    5.42  1e-06
+   122683392      30670848   float     sum    43882    2.80    5.42  1e-06    43851    2.80    5.42  1e-06
+   123731968      30932992   float     sum    44221    2.80    5.42  1e-06    44233    2.80    5.42  1e-06
+   124780544      31195136   float     sum    44589    2.80    5.42  1e-06    44606    2.80    5.42  1e-06
+   125829120      31457280   float     sum    44957    2.80    5.42  1e-06    44936    2.80    5.43  1e-06
+   126877696      31719424   float     sum    45324    2.80    5.42  1e-06    45380    2.80    5.42  1e-06
+   127926272      31981568   float     sum    45738    2.80    5.42  1e-06    45696    2.80    5.42  1e-06
+   128974848      32243712   float     sum    46070    2.80    5.42  1e-06    46090    2.80    5.42  1e-06
+   130023424      32505856   float     sum    46447    2.80    5.42  1e-06    46426    2.80    5.43  1e-06
+   131072000      32768000   float     sum    46811    2.80    5.42  1e-06    46879    2.80    5.42  1e-06
+   132120576      33030144   float     sum    47193    2.80    5.42  1e-06    47221    2.80    5.42  1e-06
+   133169152      33292288   float     sum    47633    2.80    5.42  1e-06    47645    2.80    5.42  1e-06
+   134217728      33554432   float     sum    48001    2.80    5.42  1e-06    47946    2.80    5.42  1e-06
+   135266304      33816576   float     sum    48847    2.77    5.37  1e-06    48867    2.77    5.36  1e-06
+   136314880      34078720   float     sum    49197    2.77    5.37  1e-06    49194    2.77    5.37  1e-06
+   137363456      34340864   float     sum    49557    2.77    5.37  1e-06    49589    2.77    5.37  1e-06
+   138412032      34603008   float     sum    49970    2.77    5.37  1e-06    49995    2.77    5.36  1e-06
+   139460608      34865152   float     sum    50343    2.77    5.37  1e-06    50334    2.77    5.37  1e-06
+   140509184      35127296   float     sum    50694    2.77    5.37  1e-06    50696    2.77    5.37  1e-06
+   141557760      35389440   float     sum    51059    2.77    5.37  1e-06    51042    2.77    5.37  1e-06
+   142606336      35651584   float     sum    51449    2.77    5.37  1e-06    51429    2.77    5.37  1e-06
+   143654912      35913728   float     sum    51801    2.77    5.37  1e-06    51806    2.77    5.37  1e-06
+   144703488      36175872   float     sum    52180    2.77    5.37  1e-06    52181    2.77    5.37  1e-06
+   145752064      36438016   float     sum    52562    2.77    5.37  1e-06    52564    2.77    5.37  1e-06
+   146800640      36700160   float     sum    52925    2.77    5.37  1e-06    52921    2.77    5.37  1e-06
+   147849216      36962304   float     sum    53294    2.77    5.38  1e-06    53313    2.77    5.37  1e-06
+   148897792      37224448   float     sum    53668    2.77    5.38  1e-06    53668    2.77    5.38  1e-06
+   149946368      37486592   float     sum    54027    2.78    5.38  1e-06    54037    2.77    5.38  1e-06
+   150994944      37748736   float     sum    54428    2.77    5.38  1e-06    54421    2.77    5.38  1e-06
+   152043520      38010880   float     sum    54794    2.77    5.38  1e-06    54772    2.78    5.38  1e-06
+   153092096      38273024   float     sum    55175    2.77    5.38  1e-06    55150    2.78    5.38  1e-06
+   154140672      38535168   float     sum    55531    2.78    5.38  1e-06    55542    2.78    5.38  1e-06
+   155189248      38797312   float     sum    55916    2.78    5.38  1e-06    55901    2.78    5.38  1e-06
+   156237824      39059456   float     sum    56318    2.77    5.38  1e-06    56263    2.78    5.38  1e-06
+   157286400      39321600   float     sum    56648    2.78    5.38  1e-06    56655    2.78    5.38  1e-06
+   158334976      39583744   float     sum    57016    2.78    5.38  1e-06    57024    2.78    5.38  1e-06
+   159383552      39845888   float     sum    57385    2.78    5.38  1e-06    57385    2.78    5.38  1e-06
+   160432128      40108032   float     sum    57782    2.78    5.38  1e-06    57763    2.78    5.38  1e-06
+   161480704      40370176   float     sum    58146    2.78    5.38  1e-06    58141    2.78    5.38  1e-06
+   162529280      40632320   float     sum    58524    2.78    5.38  1e-06    58516    2.78    5.38  1e-06
+   163577856      40894464   float     sum    58894    2.78    5.38  1e-06    58874    2.78    5.38  1e-06
+   164626432      41156608   float     sum    59257    2.78    5.38  1e-06    59291    2.78    5.38  1e-06
+   165675008      41418752   float     sum    59642    2.78    5.38  1e-06    59653    2.78    5.38  1e-06
+   166723584      41680896   float     sum    60003    2.78    5.38  1e-06    60019    2.78    5.38  1e-06
+   167772160      41943040   float     sum    60392    2.78    5.38  1e-06    60405    2.78    5.38  1e-06
+   168820736      42205184   float     sum    60743    2.78    5.38  1e-06    60743    2.78    5.38  1e-06
+   169869312      42467328   float     sum    61008    2.78    5.39  1e-06    60998    2.78    5.40  1e-06
+   170917888      42729472   float     sum    61310    2.79    5.40  1e-06    61309    2.79    5.40  1e-06
+   171966464      42991616   float     sum    61638    2.79    5.41  1e-06    61643    2.79    5.41  1e-06
+   173015040      43253760   float     sum    62005    2.79    5.41  1e-06    62046    2.79    5.40  1e-06
+   174063616      43515904   float     sum    62439    2.79    5.40  1e-06    62427    2.79    5.40  1e-06
+   175112192      43778048   float     sum    62756    2.79    5.41  1e-06    62740    2.79    5.41  1e-06
+   176160768      44040192   float     sum    63138    2.79    5.41  1e-06    63125    2.79    5.41  1e-06
+   177209344      44302336   float     sum    63507    2.79    5.41  1e-06    63481    2.79    5.41  1e-06
+   178257920      44564480   float     sum    63873    2.79    5.41  1e-06    63820    2.79    5.41  1e-06
+   179306496      44826624   float     sum    64212    2.79    5.41  1e-06    64201    2.79    5.41  1e-06
+   180355072      45088768   float     sum    64609    2.79    5.41  1e-06    64590    2.79    5.41  1e-06
+   181403648      45350912   float     sum    64907    2.79    5.41  1e-06    64986    2.79    5.41  1e-06
+   182452224      45613056   float     sum    65325    2.79    5.41  1e-06    65337    2.79    5.41  1e-06
+   183500800      45875200   float     sum    65693    2.79    5.41  1e-06    65615    2.80    5.42  1e-06
+   184549376      46137344   float     sum    66108    2.79    5.41  1e-06    66080    2.79    5.41  1e-06
+   185597952      46399488   float     sum    66425    2.79    5.41  1e-06    66433    2.79    5.41  1e-06
+   186646528      46661632   float     sum    66796    2.79    5.41  1e-06    66717    2.80    5.42  1e-06
+   187695104      46923776   float     sum    67109    2.80    5.42  1e-06    67212    2.79    5.41  1e-06
+   188743680      47185920   float     sum    67504    2.80    5.42  1e-06    67467    2.80    5.42  1e-06
+   189792256      47448064   float     sum    67859    2.80    5.42  1e-06    67873    2.80    5.42  1e-06
+   190840832      47710208   float     sum    68214    2.80    5.42  1e-06    68205    2.80    5.42  1e-06
+   191889408      47972352   float     sum    68564    2.80    5.42  1e-06    68584    2.80    5.42  1e-06
+   192937984      48234496   float     sum    68953    2.80    5.42  1e-06    68947    2.80    5.42  1e-06
+   193986560      48496640   float     sum    69313    2.80    5.42  1e-06    69375    2.80    5.42  1e-06
+   195035136      48758784   float     sum    69653    2.80    5.43  1e-06    69677    2.80    5.42  1e-06
+   196083712      49020928   float     sum    70045    2.80    5.42  1e-06    70118    2.80    5.42  1e-06
+   197132288      49283072   float     sum    70418    2.80    5.42  1e-06    70441    2.80    5.42  1e-06
+   198180864      49545216   float     sum    70847    2.80    5.42  1e-06    70816    2.80    5.42  1e-06
+   199229440      49807360   float     sum    71218    2.80    5.42  1e-06    71156    2.80    5.42  1e-06
+   200278016      50069504   float     sum    71490    2.80    5.43  1e-06    71561    2.80    5.42  1e-06
+   201326592      50331648   float     sum    71942    2.80    5.42  1e-06    71957    2.80    5.42  1e-06
+   202375168      50593792   float     sum    72862    2.78    5.38  1e-06    72829    2.78    5.38  1e-06
+   203423744      50855936   float     sum    73194    2.78    5.38  1e-06    73189    2.78    5.39  1e-06
+   204472320      51118080   float     sum    73572    2.78    5.38  1e-06    73573    2.78    5.38  1e-06
+   205520896      51380224   float     sum    73974    2.78    5.38  1e-06    73975    2.78    5.38  1e-06
+   206569472      51642368   float     sum    74331    2.78    5.38  1e-06    74331    2.78    5.38  1e-06
+   207618048      51904512   float     sum    74701    2.78    5.38  1e-06    74723    2.78    5.38  1e-06
+   208666624      52166656   float     sum    75096    2.78    5.38  1e-06    75055    2.78    5.39  1e-06
+   209715200      52428800   float     sum    75426    2.78    5.39  1e-06    75429    2.78    5.39  1e-06
+   210763776      52690944   float     sum    75792    2.78    5.39  1e-06    75798    2.78    5.39  1e-06
+   211812352      52953088   float     sum    76162    2.78    5.39  1e-06    76171    2.78    5.39  1e-06
+   212860928      53215232   float     sum    76525    2.78    5.39  1e-06    76521    2.78    5.39  1e-06
+   213909504      53477376   float     sum    76931    2.78    5.39  1e-06    76914    2.78    5.39  1e-06
+   214958080      53739520   float     sum    77293    2.78    5.39  1e-06    77337    2.78    5.39  1e-06
+   216006656      54001664   float     sum    77684    2.78    5.39  1e-06    77657    2.78    5.39  1e-06
+   217055232      54263808   float     sum    78037    2.78    5.39  1e-06    78017    2.78    5.39  1e-06
+   218103808      54525952   float     sum    78403    2.78    5.39  1e-06    78410    2.78    5.39  1e-06
+   219152384      54788096   float     sum    78787    2.78    5.39  1e-06    78782    2.78    5.39  1e-06
+   220200960      55050240   float     sum    79170    2.78    5.39  1e-06    79187    2.78    5.39  1e-06
+   221249536      55312384   float     sum    79526    2.78    5.39  1e-06    79529    2.78    5.39  1e-06
+   222298112      55574528   float     sum    79901    2.78    5.39  1e-06    79951    2.78    5.39  1e-06
+   223346688      55836672   float     sum    80265    2.78    5.39  1e-06    80274    2.78    5.39  1e-06
+   224395264      56098816   float     sum    80650    2.78    5.39  1e-06    80666    2.78    5.39  1e-06
+   225443840      56360960   float     sum    81001    2.78    5.39  1e-06    81013    2.78    5.39  1e-06
+   226492416      56623104   float     sum    81417    2.78    5.39  1e-06    81377    2.78    5.39  1e-06
+   227540992      56885248   float     sum    81751    2.78    5.39  1e-06    81754    2.78    5.39  1e-06
+   228589568      57147392   float     sum    82188    2.78    5.39  1e-06    82134    2.78    5.39  1e-06
+   229638144      57409536   float     sum    82539    2.78    5.39  1e-06    82517    2.78    5.39  1e-06
+   230686720      57671680   float     sum    82886    2.78    5.39  1e-06    82892    2.78    5.39  1e-06
+   231735296      57933824   float     sum    83256    2.78    5.39  1e-06    83231    2.78    5.39  1e-06
+   232783872      58195968   float     sum    83630    2.78    5.39  1e-06    83624    2.78    5.39  1e-06
+   233832448      58458112   float     sum    84001    2.78    5.39  1e-06    84022    2.78    5.39  1e-06
+   234881024      58720256   float     sum    84414    2.78    5.39  1e-06    84452    2.78    5.39  1e-06
+   235929600      58982400   float     sum    84713    2.79    5.40  1e-06    84729    2.78    5.40  1e-06
+   236978176      59244544   float     sum    84991    2.79    5.40  1e-06    85055    2.79    5.40  1e-06
+   238026752      59506688   float     sum    85286    2.79    5.41  1e-06    85278    2.79    5.41  1e-06
+   239075328      59768832   float     sum    85626    2.79    5.41  1e-06    85654    2.79    5.41  1e-06
+   240123904      60030976   float     sum    86041    2.79    5.41  1e-06    86049    2.79    5.41  1e-06
+   241172480      60293120   float     sum    86463    2.79    5.40  1e-06    86411    2.79    5.41  1e-06
+   242221056      60555264   float     sum    86779    2.79    5.41  1e-06    86746    2.79    5.41  1e-06
+   243269632      60817408   float     sum    87087    2.79    5.41  1e-06    87124    2.79    5.41  1e-06
+   244318208      61079552   float     sum    87465    2.79    5.41  1e-06    87487    2.79    5.41  1e-06
+   245366784      61341696   float     sum    87871    2.79    5.41  1e-06    87861    2.79    5.41  1e-06
+   246415360      61603840   float     sum    88217    2.79    5.41  1e-06    88179    2.79    5.41  1e-06
+   247463936      61865984   float     sum    88535    2.80    5.42  1e-06    88534    2.80    5.42  1e-06
+   248512512      62128128   float     sum    88963    2.79    5.41  1e-06    89047    2.79    5.41  1e-06
+   249561088      62390272   float     sum    89311    2.79    5.41  1e-06    89303    2.79    5.41  1e-06
+   250609664      62652416   float     sum    89666    2.79    5.42  1e-06    89716    2.79    5.41  1e-06
+   251658240      62914560   float     sum    90013    2.80    5.42  1e-06    89978    2.80    5.42  1e-06
+   252706816      63176704   float     sum    90374    2.80    5.42  1e-06    90428    2.79    5.41  1e-06
+   253755392      63438848   float     sum    90789    2.80    5.42  1e-06    90749    2.80    5.42  1e-06
+   254803968      63700992   float     sum    91082    2.80    5.42  1e-06    91172    2.79    5.41  1e-06
+   255852544      63963136   float     sum    91518    2.80    5.42  1e-06    91535    2.80    5.42  1e-06
+   256901120      64225280   float     sum    91835    2.80    5.42  1e-06    91879    2.80    5.42  1e-06
+   257949696      64487424   float     sum    92157    2.80    5.42  1e-06    92246    2.80    5.42  1e-06
+   258998272      64749568   float     sum    92590    2.80    5.42  1e-06    92545    2.80    5.42  1e-06
+   260046848      65011712   float     sum    92873    2.80    5.43  1e-06    92943    2.80    5.42  1e-06
+   261095424      65273856   float     sum    93244    2.80    5.43  1e-06    93247    2.80    5.43  1e-06
+   262144000      65536000   float     sum    93679    2.80    5.42  1e-06    93626    2.80    5.42  1e-06
+   263192576      65798144   float     sum    94049    2.80    5.42  1e-06    94004    2.80    5.42  1e-06
+   264241152      66060288   float     sum    94397    2.80    5.42  1e-06    94364    2.80    5.43  1e-06
+   265289728      66322432   float     sum    94776    2.80    5.42  1e-06    94725    2.80    5.43  1e-06
+   266338304      66584576   float     sum    95094    2.80    5.43  1e-06    95108    2.80    5.43  1e-06
+   267386880      66846720   float     sum    95483    2.80    5.43  1e-06    95596    2.80    5.42  1e-06
+   268435456      67108864   float     sum    95943    2.80    5.42  1e-06    95898    2.80    5.42  1e-06
+   269484032      67371008   float     sum    96876    2.78    5.39  1e-06    96905    2.78    5.39  1e-06
+   270532608      67633152   float     sum    97214    2.78    5.39  1e-06    97222    2.78    5.39  1e-06
+   271581184      67895296   float     sum    97587    2.78    5.39  1e-06    97593    2.78    5.39  1e-06
+   272629760      68157440   float     sum    97980    2.78    5.39  1e-06    97991    2.78    5.39  1e-06
+   273678336      68419584   float     sum    98350    2.78    5.39  1e-06    98370    2.78    5.39  1e-06
+   274726912      68681728   float     sum    98689    2.78    5.39  1e-06    98722    2.78    5.39  1e-06
+   275775488      68943872   float     sum    99065    2.78    5.39  1e-06    99047    2.78    5.39  1e-06
+   276824064      69206016   float     sum    99439    2.78    5.39  1e-06    99414    2.78    5.40  1e-06
+   277872640      69468160   float     sum    99794    2.78    5.39  1e-06    99873    2.78    5.39  1e-06
+   278921216      69730304   float     sum   100151    2.78    5.40  1e-06   100151    2.79    5.40  1e-06
+   279969792      69992448   float     sum   100538    2.78    5.40  1e-06   100526    2.79    5.40  1e-06
+   281018368      70254592   float     sum   100905    2.78    5.40  1e-06   100962    2.78    5.39  1e-06
+   282066944      70516736   float     sum   101267    2.79    5.40  1e-06   101308    2.78    5.39  1e-06
+   283115520      70778880   float     sum   101647    2.79    5.40  1e-06   101709    2.78    5.39  1e-06
+   284164096      71041024   float     sum   102019    2.79    5.40  1e-06   102028    2.79    5.40  1e-06
+   285212672      71303168   float     sum   102411    2.78    5.40  1e-06   102438    2.78    5.39  1e-06
+   286261248      71565312   float     sum   102778    2.79    5.40  1e-06   102777    2.79    5.40  1e-06
+   287309824      71827456   float     sum   103143    2.79    5.40  1e-06   103159    2.79    5.40  1e-06
+   288358400      72089600   float     sum   103527    2.79    5.40  1e-06   103541    2.78    5.40  1e-06
+   289406976      72351744   float     sum   103932    2.78    5.40  1e-06   103893    2.79    5.40  1e-06
+   290455552      72613888   float     sum   104251    2.79    5.40  1e-06   104280    2.79    5.40  1e-06
+   291504128      72876032   float     sum   104636    2.79    5.40  1e-06   104638    2.79    5.40  1e-06
+   292552704      73138176   float     sum   105058    2.78    5.40  1e-06   105028    2.79    5.40  1e-06
+   293601280      73400320   float     sum   105366    2.79    5.40  1e-06   105380    2.79    5.40  1e-06
+   294649856      73662464   float     sum   105758    2.79    5.40  1e-06   105781    2.79    5.40  1e-06
+   295698432      73924608   float     sum   106130    2.79    5.40  1e-06   106124    2.79    5.40  1e-06
+   296747008      74186752   float     sum   106517    2.79    5.40  1e-06   106536    2.79    5.40  1e-06
+   297795584      74448896   float     sum   106859    2.79    5.40  1e-06   106895    2.79    5.40  1e-06
+   298844160      74711040   float     sum   107244    2.79    5.40  1e-06   107257    2.79    5.40  1e-06
+   299892736      74973184   float     sum   107640    2.79    5.40  1e-06   107642    2.79    5.40  1e-06
+   300941312      75235328   float     sum   108026    2.79    5.40  1e-06   108005    2.79    5.40  1e-06
+   301989888      75497472   float     sum   108398    2.79    5.40  1e-06   108408    2.79    5.40  1e-06
+   303038464      75759616   float     sum   108718    2.79    5.40  1e-06   108719    2.79    5.40  1e-06
+   304087040      76021760   float     sum   109010    2.79    5.40  1e-06   108999    2.79    5.41  1e-06
+   305135616      76283904   float     sum   109309    2.79    5.41  1e-06   109322    2.79    5.41  1e-06
+   306184192      76546048   float     sum   109660    2.79    5.41  1e-06   109657    2.79    5.41  1e-06
+   307232768      76808192   float     sum   109987    2.79    5.41  1e-06   109989    2.79    5.41  1e-06
+   308281344      77070336   float     sum   110349    2.79    5.41  1e-06   110348    2.79    5.41  1e-06
+   309329920      77332480   float     sum   110715    2.79    5.41  1e-06   110702    2.79    5.41  1e-06
+   310378496      77594624   float     sum   111077    2.79    5.41  1e-06   111076    2.79    5.41  1e-06
+   311427072      77856768   float     sum   111378    2.80    5.42  1e-06   111448    2.79    5.41  1e-06
+   312475648      78118912   float     sum   111869    2.79    5.41  1e-06   111761    2.80    5.42  1e-06
+   313524224      78381056   float     sum   112148    2.80    5.42  1e-06   112233    2.79    5.41  1e-06
+   314572800      78643200   float     sum   112632    2.79    5.41  1e-06   112531    2.80    5.42  1e-06
+   315621376      78905344   float     sum   112938    2.79    5.41  1e-06   112876    2.80    5.42  1e-06
+   316669952      79167488   float     sum   113248    2.80    5.42  1e-06   113261    2.80    5.42  1e-06
+   317718528      79429632   float     sum   113684    2.79    5.41  1e-06   113730    2.79    5.41  1e-06
+   318767104      79691776   float     sum   114025    2.80    5.42  1e-06   113998    2.80    5.42  1e-06
+   319815680      79953920   float     sum   114361    2.80    5.42  1e-06   114387    2.80    5.42  1e-06
+   320864256      80216064   float     sum   114666    2.80    5.42  1e-06   114733    2.80    5.42  1e-06
+   321912832      80478208   float     sum   115161    2.80    5.42  1e-06   115153    2.80    5.42  1e-06
+   322961408      80740352   float     sum   115496    2.80    5.42  1e-06   115381    2.80    5.42  1e-06
+   324009984      81002496   float     sum   115832    2.80    5.42  1e-06   115830    2.80    5.42  1e-06
+   325058560      81264640   float     sum   116122    2.80    5.42  1e-06   116175    2.80    5.42  1e-06
+   326107136      81526784   float     sum   116630    2.80    5.42  1e-06   116668    2.80    5.42  1e-06
+   327155712      81788928   float     sum   116954    2.80    5.42  1e-06   116975    2.80    5.42  1e-06
+   328204288      82051072   float     sum   117259    2.80    5.42  1e-06   117273    2.80    5.42  1e-06
+   329252864      82313216   float     sum   117595    2.80    5.42  1e-06   117684    2.80    5.42  1e-06
+   330301440      82575360   float     sum   117991    2.80    5.42  1e-06   117970    2.80    5.42  1e-06
+   331350016      82837504   float     sum   118363    2.80    5.42  1e-06   118463    2.80    5.42  1e-06
+   332398592      83099648   float     sum   118693    2.80    5.43  1e-06   118708    2.80    5.43  1e-06
+   333447168      83361792   float     sum   119136    2.80    5.42  1e-06   119213    2.80    5.42  1e-06
+   334495744      83623936   float     sum   119507    2.80    5.42  1e-06   119526    2.80    5.42  1e-06
+   335544320      83886080   float     sum   119890    2.80    5.42  1e-06   119913    2.80    5.42  1e-06
+   336592896      84148224   float     sum   120890    2.78    5.39  1e-06   120860    2.78    5.40  1e-06
+   337641472      84410368   float     sum   121251    2.78    5.40  1e-06   121233    2.79    5.40  1e-06
+   338690048      84672512   float     sum   121612    2.79    5.40  1e-06   121609    2.79    5.40  1e-06
+   339738624      84934656   float     sum   122005    2.78    5.40  1e-06   122004    2.78    5.40  1e-06
+   340787200      85196800   float     sum   122389    2.78    5.39  1e-06   122331    2.79    5.40  1e-06
+   341835776      85458944   float     sum   122693    2.79    5.40  1e-06   122710    2.79    5.40  1e-06
+   342884352      85721088   float     sum   123089    2.79    5.40  1e-06   123070    2.79    5.40  1e-06
+   343932928      85983232   float     sum   123449    2.79    5.40  1e-06   123457    2.79    5.40  1e-06
+   344981504      86245376   float     sum   123821    2.79    5.40  1e-06   123852    2.79    5.40  1e-06
+   346030080      86507520   float     sum   124198    2.79    5.40  1e-06   124206    2.79    5.40  1e-06
+   347078656      86769664   float     sum   124606    2.79    5.40  1e-06   124573    2.79    5.40  1e-06
+   348127232      87031808   float     sum   124904    2.79    5.40  1e-06   124967    2.79    5.40  1e-06
+   349175808      87293952   float     sum   125325    2.79    5.40  1e-06   125292    2.79    5.40  1e-06
+   350224384      87556096   float     sum   125642    2.79    5.40  1e-06   125678    2.79    5.40  1e-06
+   351272960      87818240   float     sum   126039    2.79    5.40  1e-06   126045    2.79    5.40  1e-06
+   352321536      88080384   float     sum   126408    2.79    5.40  1e-06   126421    2.79    5.40  1e-06
+   353370112      88342528   float     sum   126820    2.79    5.40  1e-06   126800    2.79    5.40  1e-06
+   354418688      88604672   float     sum   127169    2.79    5.40  1e-06   127164    2.79    5.40  1e-06
+   355467264      88866816   float     sum   127557    2.79    5.40  1e-06   127531    2.79    5.40  1e-06
+   356515840      89128960   float     sum   127935    2.79    5.40  1e-06   127930    2.79    5.40  1e-06
+   357564416      89391104   float     sum   128271    2.79    5.40  1e-06   128301    2.79    5.40  1e-06
+   358612992      89653248   float     sum   128654    2.79    5.40  1e-06   128665    2.79    5.40  1e-06
+   359661568      89915392   float     sum   129051    2.79    5.40  1e-06   129041    2.79    5.40  1e-06
+   360710144      90177536   float     sum   129378    2.79    5.40  1e-06   129410    2.79    5.40  1e-06
+   361758720      90439680   float     sum   129749    2.79    5.40  1e-06   129767    2.79    5.40  1e-06
+   362807296      90701824   float     sum   130139    2.79    5.40  1e-06   130200    2.79    5.40  1e-06
+   363855872      90963968   float     sum   130541    2.79    5.40  1e-06   130515    2.79    5.40  1e-06
+   364904448      91226112   float     sum   130889    2.79    5.40  1e-06   130884    2.79    5.40  1e-06
+   365953024      91488256   float     sum   131272    2.79    5.40  1e-06   131261    2.79    5.40  1e-06
+   367001600      91750400   float     sum   131614    2.79    5.40  1e-06   131657    2.79    5.40  1e-06
+   368050176      92012544   float     sum   132028    2.79    5.40  1e-06   132034    2.79    5.40  1e-06
+   369098752      92274688   float     sum   132476    2.79    5.40  1e-06   132405    2.79    5.40  1e-06
+   370147328      92536832   float     sum   132769    2.79    5.40  1e-06   132768    2.79    5.40  1e-06
+   371195904      92798976   float     sum   133036    2.79    5.41  1e-06   133004    2.79    5.41  1e-06
+   372244480      93061120   float     sum   133326    2.79    5.41  1e-06   133315    2.79    5.41  1e-06
+   373293056      93323264   float     sum   133675    2.79    5.41  1e-06   133648    2.79    5.41  1e-06
+   374341632      93585408   float     sum   133956    2.79    5.41  1e-06   133998    2.79    5.41  1e-06
+   375390208      93847552   float     sum   134380    2.79    5.41  1e-06   134345    2.79    5.41  1e-06
+   376438784      94109696   float     sum   134673    2.80    5.42  1e-06   134669    2.80    5.42  1e-06
+   377487360      94371840   float     sum   135076    2.79    5.41  1e-06   135042    2.80    5.42  1e-06
+   378535936      94633984   float     sum   135478    2.79    5.41  1e-06   135410    2.80    5.42  1e-06
+   379584512      94896128   float     sum   135754    2.80    5.42  1e-06   135807    2.80    5.42  1e-06
+   380633088      95158272   float     sum   136212    2.79    5.41  1e-06   136182    2.80    5.42  1e-06
+   381681664      95420416   float     sum   136488    2.80    5.42  1e-06   136545    2.80    5.42  1e-06
+   382730240      95682560   float     sum   136931    2.80    5.42  1e-06   136818    2.80    5.42  1e-06
+   383778816      95944704   float     sum   137336    2.79    5.41  1e-06   137193    2.80    5.42  1e-06
+   384827392      96206848   float     sum   137603    2.80    5.42  1e-06   137576    2.80    5.42  1e-06
+   385875968      96468992   float     sum   137897    2.80    5.42  1e-06   137983    2.80    5.42  1e-06
+   386924544      96731136   float     sum   138380    2.80    5.42  1e-06   138336    2.80    5.42  1e-06
+   387973120      96993280   float     sum   138680    2.80    5.42  1e-06   138675    2.80    5.42  1e-06
+   389021696      97255424   float     sum   139121    2.80    5.42  1e-06   139145    2.80    5.42  1e-06
+   390070272      97517568   float     sum   139492    2.80    5.42  1e-06   139469    2.80    5.42  1e-06
+   391118848      97779712   float     sum   139832    2.80    5.42  1e-06   139807    2.80    5.42  1e-06
+   392167424      98041856   float     sum   140113    2.80    5.42  1e-06   140210    2.80    5.42  1e-06
+   393216000      98304000   float     sum   140491    2.80    5.42  1e-06   140575    2.80    5.42  1e-06
+   394264576      98566144   float     sum   140958    2.80    5.42  1e-06   140778    2.80    5.43  1e-06
+   395313152      98828288   float     sum   141241    2.80    5.42  1e-06   141247    2.80    5.42  1e-06
+   396361728      99090432   float     sum   141529    2.80    5.43  1e-06   141616    2.80    5.42  1e-06
+   397410304      99352576   float     sum   142012    2.80    5.42  1e-06   142045    2.80    5.42  1e-06
+   398458880      99614720   float     sum   142378    2.80    5.42  1e-06   142336    2.80    5.42  1e-06
+   399507456      99876864   float     sum   142769    2.80    5.42  1e-06   142746    2.80    5.42  1e-06
+   400556032     100139008   float     sum   142976    2.80    5.43  1e-06   143057    2.80    5.42  1e-06
+   401604608     100401152   float     sum   143542    2.80    5.42  1e-06   143486    2.80    5.42  1e-06
+   402653184     100663296   float     sum   143937    2.80    5.42  1e-06   143873    2.80    5.42  1e-06
+   403701760     100925440   float     sum   144925    2.79    5.40  1e-06   144865    2.79    5.40  1e-06
+   404750336     101187584   float     sum   145260    2.79    5.40  1e-06   145241    2.79    5.40  1e-06
+   405798912     101449728   float     sum   145617    2.79    5.40  1e-06   145625    2.79    5.40  1e-06
+   406847488     101711872   float     sum   146016    2.79    5.40  1e-06   145972    2.79    5.40  1e-06
+   407896064     101974016   float     sum   146379    2.79    5.40  1e-06   146377    2.79    5.40  1e-06
+   408944640     102236160   float     sum   146773    2.79    5.40  1e-06   146745    2.79    5.40  1e-06
+   409993216     102498304   float     sum   147116    2.79    5.40  1e-06   147077    2.79    5.40  1e-06
+   411041792     102760448   float     sum   147444    2.79    5.40  1e-06   147483    2.79    5.40  1e-06
+   412090368     103022592   float     sum   147851    2.79    5.40  1e-06   147817    2.79    5.40  1e-06
+   413138944     103284736   float     sum   148204    2.79    5.40  1e-06   148191    2.79    5.40  1e-06
+   414187520     103546880   float     sum   148575    2.79    5.40  1e-06   148609    2.79    5.40  1e-06
+   415236096     103809024   float     sum   148958    2.79    5.40  1e-06   148957    2.79    5.40  1e-06
+   416284672     104071168   float     sum   149313    2.79    5.40  1e-06   149310    2.79    5.40  1e-06
+   417333248     104333312   float     sum   149691    2.79    5.40  1e-06   149703    2.79    5.40  1e-06
+   418381824     104595456   float     sum   150055    2.79    5.40  1e-06   150084    2.79    5.40  1e-06
+   419430400     104857600   float     sum   150422    2.79    5.40  1e-06   150446    2.79    5.40  1e-06
+   420478976     105119744   float     sum   150837    2.79    5.40  1e-06   150809    2.79    5.40  1e-06
+   421527552     105381888   float     sum   151191    2.79    5.40  1e-06   151163    2.79    5.40  1e-06
+   422576128     105644032   float     sum   151532    2.79    5.40  1e-06   151554    2.79    5.40  1e-06
+   423624704     105906176   float     sum   151920    2.79    5.40  1e-06   151933    2.79    5.40  1e-06
+   424673280     106168320   float     sum   152273    2.79    5.40  1e-06   152293    2.79    5.40  1e-06
+   425721856     106430464   float     sum   152700    2.79    5.40  1e-06   152665    2.79    5.40  1e-06
+   426770432     106692608   float     sum   153082    2.79    5.40  1e-06   153064    2.79    5.40  1e-06
+   427819008     106954752   float     sum   153495    2.79    5.40  1e-06   153402    2.79    5.40  1e-06
+   428867584     107216896   float     sum   153775    2.79    5.40  1e-06   153773    2.79    5.40  1e-06
+   429916160     107479040   float     sum   154166    2.79    5.40  1e-06   154157    2.79    5.40  1e-06
+   430964736     107741184   float     sum   154548    2.79    5.40  1e-06   154540    2.79    5.40  1e-06
+   432013312     108003328   float     sum   154886    2.79    5.40  1e-06   154938    2.79    5.40  1e-06
+   433061888     108265472   float     sum   155246    2.79    5.40  1e-06   155263    2.79    5.40  1e-06
+   434110464     108527616   float     sum   155691    2.79    5.40  1e-06   155643    2.79    5.40  1e-06
+   435159040     108789760   float     sum   156039    2.79    5.40  1e-06   156021    2.79    5.40  1e-06
+   436207616     109051904   float     sum   156382    2.79    5.40  1e-06   156449    2.79    5.40  1e-06
+   437256192     109314048   float     sum   156750    2.79    5.40  1e-06   156701    2.79    5.41  1e-06
+   438304768     109576192   float     sum   157036    2.79    5.41  1e-06   157028    2.79    5.41  1e-06
+   439353344     109838336   float     sum   157342    2.79    5.41  1e-06   157369    2.79    5.41  1e-06
+   440401920     110100480   float     sum   157647    2.79    5.41  1e-06   157692    2.79    5.41  1e-06
+   441450496     110362624   float     sum   157986    2.79    5.41  1e-06   158038    2.79    5.41  1e-06
+   442499072     110624768   float     sum   158443    2.79    5.41  1e-06   158410    2.79    5.41  1e-06
+   443547648     110886912   float     sum   158706    2.79    5.41  1e-06   158679    2.80    5.42  1e-06
+   444596224     111149056   float     sum   159041    2.80    5.42  1e-06   159018    2.80    5.42  1e-06
+   445644800     111411200   float     sum   159448    2.79    5.42  1e-06   159496    2.79    5.41  1e-06
+   446693376     111673344   float     sum   159700    2.80    5.42  1e-06   159814    2.80    5.42  1e-06
+   447741952     111935488   float     sum   160157    2.80    5.42  1e-06   160113    2.80    5.42  1e-06
+   448790528     112197632   float     sum   160492    2.80    5.42  1e-06   160450    2.80    5.42  1e-06
+   449839104     112459776   float     sum   160943    2.80    5.42  1e-06   160801    2.80    5.42  1e-06
+   450887680     112721920   float     sum   161173    2.80    5.42  1e-06   161244    2.80    5.42  1e-06
+   451936256     112984064   float     sum   161592    2.80    5.42  1e-06   161588    2.80    5.42  1e-06
+   452984832     113246208   float     sum   161930    2.80    5.42  1e-06   161897    2.80    5.42  1e-06
+   454033408     113508352   float     sum   162314    2.80    5.42  1e-06   162231    2.80    5.42  1e-06
+   455081984     113770496   float     sum   162686    2.80    5.42  1e-06   162756    2.80    5.42  1e-06
+   456130560     114032640   float     sum   163096    2.80    5.42  1e-06   163040    2.80    5.42  1e-06
+   457179136     114294784   float     sum   163454    2.80    5.42  1e-06   163425    2.80    5.42  1e-06
+   458227712     114556928   float     sum   163741    2.80    5.42  1e-06   163782    2.80    5.42  1e-06
+   459276288     114819072   float     sum   164142    2.80    5.42  1e-06   164260    2.80    5.42  1e-06
+   460324864     115081216   float     sum   164491    2.80    5.42  1e-06   164481    2.80    5.42  1e-06
+   461373440     115343360   float     sum   164845    2.80    5.42  1e-06   164945    2.80    5.42  1e-06
+   462422016     115605504   float     sum   165178    2.80    5.42  1e-06   165314    2.80    5.42  1e-06
+   463470592     115867648   float     sum   165490    2.80    5.43  1e-06   165578    2.80    5.42  1e-06
+   464519168     116129792   float     sum   166099    2.80    5.42  1e-06   165985    2.80    5.42  1e-06
+   465567744     116391936   float     sum   166316    2.80    5.42  1e-06   166345    2.80    5.42  1e-06
+   466616320     116654080   float     sum   166690    2.80    5.42  1e-06   166751    2.80    5.42  1e-06
+   467664896     116916224   float     sum   167146    2.80    5.42  1e-06   167040    2.80    5.42  1e-06
+   468713472     117178368   float     sum   167387    2.80    5.43  1e-06   167462    2.80    5.42  1e-06
+   469762048     117440512   float     sum   167829    2.80    5.42  1e-06   167716    2.80    5.43  1e-06
+   470810624     117702656   float     sum   168880    2.79    5.40  1e-06   168889    2.79    5.40  1e-06
+   471859200     117964800   float     sum   169308    2.79    5.40  1e-06   169269    2.79    5.40  1e-06
+   472907776     118226944   float     sum   169617    2.79    5.40  1e-06   169625    2.79    5.40  1e-06
+   473956352     118489088   float     sum   170035    2.79    5.40  1e-06   170097    2.79    5.40  1e-06
+   475004928     118751232   float     sum   170370    2.79    5.40  1e-06   170393    2.79    5.40  1e-06
+   476053504     119013376   float     sum   170781    2.79    5.40  1e-06   170742    2.79    5.40  1e-06
+   477102080     119275520   float     sum   171122    2.79    5.40  1e-06   171098    2.79    5.40  1e-06
+   478150656     119537664   float     sum   171491    2.79    5.40  1e-06   171466    2.79    5.40  1e-06
+   479199232     119799808   float     sum   171863    2.79    5.40  1e-06   171840    2.79    5.40  1e-06
+   480247808     120061952   float     sum   172234    2.79    5.40  1e-06   172304    2.79    5.40  1e-06
+   481296384     120324096   float     sum   172582    2.79    5.40  1e-06   172600    2.79    5.40  1e-06
+   482344960     120586240   float     sum   172955    2.79    5.40  1e-06   173016    2.79    5.40  1e-06
+   483393536     120848384   float     sum   173325    2.79    5.40  1e-06   173329    2.79    5.40  1e-06
+   484442112     121110528   float     sum   173676    2.79    5.40  1e-06   173687    2.79    5.40  1e-06
+   485490688     121372672   float     sum   174121    2.79    5.40  1e-06   174054    2.79    5.40  1e-06
+   486539264     121634816   float     sum   174443    2.79    5.40  1e-06   174405    2.79    5.41  1e-06
+   487587840     121896960   float     sum   174793    2.79    5.40  1e-06   174829    2.79    5.40  1e-06
+   488636416     122159104   float     sum   175175    2.79    5.40  1e-06   175158    2.79    5.41  1e-06
+   489684992     122421248   float     sum   175608    2.79    5.40  1e-06   175533    2.79    5.41  1e-06
+   490733568     122683392   float     sum   175914    2.79    5.40  1e-06   175931    2.79    5.40  1e-06
+   491782144     122945536   float     sum   176309    2.79    5.40  1e-06   176313    2.79    5.40  1e-06
+   492830720     123207680   float     sum   176709    2.79    5.40  1e-06   176701    2.79    5.40  1e-06
+   493879296     123469824   float     sum   177055    2.79    5.40  1e-06   177015    2.79    5.41  1e-06
+   494927872     123731968   float     sum   177451    2.79    5.40  1e-06   177426    2.79    5.40  1e-06
+   495976448     123994112   float     sum   177792    2.79    5.40  1e-06   177792    2.79    5.40  1e-06
+   497025024     124256256   float     sum   178163    2.79    5.41  1e-06   178177    2.79    5.40  1e-06
+   498073600     124518400   float     sum   178551    2.79    5.40  1e-06   178517    2.79    5.41  1e-06
+   499122176     124780544   float     sum   178911    2.79    5.41  1e-06   178915    2.79    5.41  1e-06
+   500170752     125042688   float     sum   179273    2.79    5.41  1e-06   179256    2.79    5.41  1e-06
+   501219328     125304832   float     sum   179659    2.79    5.41  1e-06   179728    2.79    5.40  1e-06
+   502267904     125566976   float     sum   180078    2.79    5.40  1e-06   180048    2.79    5.40  1e-06
+   503316480     125829120   float     sum   180458    2.79    5.40  1e-06   180437    2.79    5.40  1e-06
+   504365056     126091264   float     sum   180759    2.79    5.41  1e-06   180755    2.79    5.41  1e-06
+   505413632     126353408   float     sum   181051    2.79    5.41  1e-06   181031    2.79    5.41  1e-06
+   506462208     126615552   float     sum   181408    2.79    5.41  1e-06   181326    2.79    5.41  1e-06
+   507510784     126877696   float     sum   181614    2.79    5.41  1e-06   181594    2.79    5.41  1e-06
+   508559360     127139840   float     sum   181981    2.79    5.41  1e-06   181976    2.79    5.41  1e-06
+   509607936     127401984   float     sum   182351    2.79    5.41  1e-06   182286    2.80    5.42  1e-06
+   510656512     127664128   float     sum   182737    2.79    5.41  1e-06   182666    2.80    5.42  1e-06
+   511705088     127926272   float     sum   182999    2.80    5.42  1e-06   183061    2.80    5.42  1e-06
+   512753664     128188416   float     sum   183399    2.80    5.42  1e-06   183447    2.80    5.42  1e-06
+   513802240     128450560   float     sum   183772    2.80    5.42  1e-06   183735    2.80    5.42  1e-06
+   514850816     128712704   float     sum   184112    2.80    5.42  1e-06   184200    2.80    5.42  1e-06
+   515899392     128974848   float     sum   184559    2.80    5.42  1e-06   184389    2.80    5.42  1e-06
+   516947968     129236992   float     sum   184872    2.80    5.42  1e-06   184866    2.80    5.42  1e-06
+   517996544     129499136   float     sum   185113    2.80    5.42  1e-06   185284    2.80    5.42  1e-06
+   519045120     129761280   float     sum   185595    2.80    5.42  1e-06   185621    2.80    5.42  1e-06
+   520093696     130023424   float     sum   185860    2.80    5.42  1e-06   185847    2.80    5.42  1e-06
+   521142272     130285568   float     sum   186270    2.80    5.42  1e-06   186143    2.80    5.42  1e-06
+   522190848     130547712   float     sum   186626    2.80    5.42  1e-06   186609    2.80    5.42  1e-06
+   523239424     130809856   float     sum   186996    2.80    5.42  1e-06   187121    2.80    5.42  1e-06
+   524288000     131072000   float     sum   187412    2.80    5.42  1e-06   187308    2.80    5.42  1e-06
+   525336576     131334144   float     sum   187862    2.80    5.42  1e-06   187857    2.80    5.42  1e-06
+   526385152     131596288   float     sum   188180    2.80    5.42  1e-06   188111    2.80    5.42  1e-06
+   527433728     131858432   float     sum   188491    2.80    5.42  1e-06   188548    2.80    5.42  1e-06
+   528482304     132120576   float     sum   188748    2.80    5.42  1e-06   188945    2.80    5.42  1e-06
+   529530880     132382720   float     sum   189235    2.80    5.42  1e-06   189073    2.80    5.43  1e-06
+   530579456     132644864   float     sum   189505    2.80    5.42  1e-06   189537    2.80    5.42  1e-06
+   531628032     132907008   float     sum   189943    2.80    5.42  1e-06   189959    2.80    5.42  1e-06
+   532676608     133169152   float     sum   190275    2.80    5.42  1e-06   190340    2.80    5.42  1e-06
+   533725184     133431296   float     sum   190765    2.80    5.42  1e-06   190802    2.80    5.42  1e-06
+   534773760     133693440   float     sum   191035    2.80    5.42  1e-06   191010    2.80    5.42  1e-06
+   535822336     133955584   float     sum   191462    2.80    5.42  1e-06   191476    2.80    5.42  1e-06
+   536870912     134217728   float     sum   191943    2.80    5.42  1e-06   191827    2.80    5.42  1e-06
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 5.36244 
+#
