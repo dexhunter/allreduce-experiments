@@ -1,0 +1,735 @@
+# nThread 1 nGpus 1 minBytes 1048576 maxBytes 268435456 step: 2(factor) warmup iters: 5 iters: 20 validation: 1 
+#
+# Using devices
+#   Rank  0 Pid  15610 on      node1 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank  1 Pid  15611 on      node1 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank  2 Pid  15612 on      node1 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank  3 Pid  15613 on      node1 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank  4 Pid 148325 on      node2 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank  5 Pid 148326 on      node2 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank  6 Pid 148327 on      node2 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank  7 Pid 148328 on      node2 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank  8 Pid 101456 on      node3 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank  9 Pid 101457 on      node3 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 10 Pid 101458 on      node3 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 11 Pid 101459 on      node3 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank 12 Pid  16519 on       gpu4 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank 13 Pid  16520 on       gpu4 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 14 Pid  16521 on       gpu4 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 15 Pid  16522 on       gpu4 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank 16 Pid  36927 on       gpu5 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank 17 Pid  36928 on       gpu5 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 18 Pid  36929 on       gpu5 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 19 Pid  36930 on       gpu5 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank 20 Pid    587 on       gpu6 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank 21 Pid    588 on       gpu6 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 22 Pid    589 on       gpu6 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 23 Pid    591 on       gpu6 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank 24 Pid  14233 on       gpu7 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank 25 Pid  14234 on       gpu7 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 26 Pid  14235 on       gpu7 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 27 Pid  14236 on       gpu7 device  3 [0xb2] GeForce RTX 2080 Ti
+#   Rank 28 Pid  33856 on       gpu8 device  0 [0x3d] GeForce RTX 2080 Ti
+#   Rank 29 Pid  33857 on       gpu8 device  1 [0x3e] GeForce RTX 2080 Ti
+#   Rank 30 Pid  33858 on       gpu8 device  2 [0xb1] GeForce RTX 2080 Ti
+#   Rank 31 Pid  33859 on       gpu8 device  3 [0xb2] GeForce RTX 2080 Ti
+node1:15610:15610 [0] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.11<0>
+node1:15610:15610 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node1:15610:15610 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.11<0>
+node1:15610:15610 [0] NCCL INFO Using network IB
+gpu4:16519:16519 [0] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.14<0>
+gpu4:16519:16519 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu4:16521:16521 [2] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.14<0>
+gpu4:16520:16520 [1] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.14<0>
+gpu4:16522:16522 [3] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.14<0>
+gpu4:16521:16521 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu4:16522:16522 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu4:16520:16520 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu4:16519:16519 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.14<0>
+gpu4:16519:16519 [0] NCCL INFO Using network IB
+gpu4:16521:16521 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.14<0>
+gpu4:16521:16521 [2] NCCL INFO Using network IB
+gpu4:16520:16520 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.14<0>
+gpu4:16520:16520 [1] NCCL INFO Using network IB
+gpu4:16522:16522 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.14<0>
+gpu4:16522:16522 [3] NCCL INFO Using network IB
+gpu7:14233:14233 [0] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.17<0>
+gpu7:14234:14234 [1] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.17<0>
+gpu7:14236:14236 [3] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.17<0>
+gpu7:14235:14235 [2] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.17<0>
+gpu7:14233:14233 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu7:14234:14234 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu7:14235:14235 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu7:14236:14236 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu8:33859:33859 [3] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.18<0>
+gpu8:33857:33857 [1] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.18<0>
+gpu8:33858:33858 [2] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.18<0>
+gpu8:33856:33856 [0] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.18<0>
+gpu8:33859:33859 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu8:33856:33856 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu8:33858:33858 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu8:33857:33857 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node2:148326:148326 [1] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.12<0>
+node2:148328:148328 [3] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.12<0>
+node2:148327:148327 [2] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.12<0>
+node2:148325:148325 [0] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.12<0>
+node3:101456:101456 [0] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.13<0>
+node2:148326:148326 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node3:101459:101459 [3] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.13<0>
+node3:101458:101458 [2] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.13<0>
+node3:101457:101457 [1] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.13<0>
+node2:148328:148328 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node3:101456:101456 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node2:148325:148325 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node2:148327:148327 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node3:101459:101459 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node3:101458:101458 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node3:101457:101457 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu8:33856:33856 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.18<0>
+gpu8:33856:33856 [0] NCCL INFO Using network IB
+node2:148327:148327 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.12<0>
+node2:148327:148327 [2] NCCL INFO Using network IB
+gpu8:33858:33858 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.18<0>
+gpu8:33858:33858 [2] NCCL INFO Using network IB
+gpu8:33857:33857 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.18<0>
+gpu8:33857:33857 [1] NCCL INFO Using network IB
+node3:101456:101456 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.13<0>
+node3:101456:101456 [0] NCCL INFO Using network IB
+node3:101457:101457 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.13<0>
+node3:101457:101457 [1] NCCL INFO Using network IB
+node3:101459:101459 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.13<0>
+node3:101459:101459 [3] NCCL INFO Using network IB
+node2:148325:148325 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.12<0>
+node2:148325:148325 [0] NCCL INFO Using network IB
+node2:148328:148328 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.12<0>
+node2:148328:148328 [3] NCCL INFO Using network IB
+node2:148326:148326 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.12<0>
+node2:148326:148326 [1] NCCL INFO Using network IB
+node3:101458:101458 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.13<0>
+node3:101458:101458 [2] NCCL INFO Using network IB
+gpu7:14234:14234 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.17<0>
+gpu7:14234:14234 [1] NCCL INFO Using network IB
+gpu7:14236:14236 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.17<0>
+gpu7:14236:14236 [3] NCCL INFO Using network IB
+gpu7:14235:14235 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.17<0>
+gpu7:14235:14235 [2] NCCL INFO Using network IB
+gpu7:14233:14233 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.17<0>
+gpu7:14233:14233 [0] NCCL INFO Using network IB
+gpu8:33859:33859 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.18<0>
+gpu8:33859:33859 [3] NCCL INFO Using network IB
+NCCL version 2.6.4+cuda10.1
+gpu5:36930:36930 [3] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.15<0>
+gpu5:36928:36928 [1] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.15<0>
+gpu5:36927:36927 [0] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.15<0>
+gpu5:36929:36929 [2] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.15<0>
+gpu6:589:589 [2] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.16<0>
+gpu6:591:591 [3] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.16<0>
+gpu5:36930:36930 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu6:587:587 [0] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.16<0>
+gpu6:588:588 [1] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.16<0>
+gpu6:591:591 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu5:36928:36928 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu5:36927:36927 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu5:36929:36929 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu6:587:587 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu6:588:588 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu6:589:589 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu6:589:589 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.16<0>
+gpu6:589:589 [2] NCCL INFO Using network IB
+gpu6:588:588 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.16<0>
+gpu6:588:588 [1] NCCL INFO Using network IB
+gpu6:587:587 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.16<0>
+gpu6:587:587 [0] NCCL INFO Using network IB
+node1:15613:15613 [3] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.11<0>
+node1:15611:15611 [1] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.11<0>
+node1:15612:15612 [2] NCCL INFO Bootstrap : Using [0]ib0:10.0.0.11<0>
+node1:15613:15613 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node1:15612:15612 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+node1:15611:15611 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+gpu5:36930:36930 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.15<0>
+gpu5:36930:36930 [3] NCCL INFO Using network IB
+gpu5:36928:36928 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.15<0>
+gpu5:36928:36928 [1] NCCL INFO Using network IB
+gpu5:36929:36929 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.15<0>
+gpu5:36929:36929 [2] NCCL INFO Using network IB
+gpu5:36927:36927 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.15<0>
+gpu5:36927:36927 [0] NCCL INFO Using network IB
+gpu6:591:591 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.16<0>
+gpu6:591:591 [3] NCCL INFO Using network IB
+node1:15613:15613 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.11<0>
+node1:15613:15613 [3] NCCL INFO Using network IB
+node1:15612:15612 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.11<0>
+node1:15612:15612 [2] NCCL INFO Using network IB
+node1:15611:15611 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB ; OOB ib0:10.0.0.11<0>
+node1:15611:15611 [1] NCCL INFO Using network IB
+gpu6:591:691 [3] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu6:591:691 [3] NCCL INFO Trees [0] 20/-1/-1->23->22|22->23->20/-1/-1 [1] 20/14/30->23->22|22->23->20/14/30
+gpu6:591:691 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+node1:15612:15700 [2] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node1:15612:15700 [2] NCCL INFO Trees [0] 3/-1/-1->2->-1|-1->2->3/-1/-1 [1] 3/-1/-1->2->31|31->2->3/-1/-1
+node1:15610:15701 [0] NCCL INFO Channel 00/02 :    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+node1:15610:15701 [0] NCCL INFO Channel 01/02 :    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+gpu7:14233:14308 [0] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu7:14233:14308 [0] NCCL INFO Trees [0] 25/-1/-1->24->27|27->24->25/-1/-1 [1] 25/-1/-1->24->27|27->24->25/-1/-1
+gpu7:14233:14308 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+node1:15611:15699 [1] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node1:15611:15699 [1] NCCL INFO Trees [0] -1/-1/-1->1->0|0->1->-1/-1/-1 [1] -1/-1/-1->1->0|0->1->-1/-1/-1
+node1:15612:15700 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu6:591:691 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu7:14234:14309 [1] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu7:14234:14309 [1] NCCL INFO Trees [0] -1/-1/-1->25->24|24->25->-1/-1/-1 [1] -1/-1/-1->25->24|24->25->-1/-1/-1
+gpu7:14234:14309 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+gpu7:14235:14310 [2] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu7:14235:14310 [2] NCCL INFO Trees [0] 27/-1/-1->26->19|19->26->27/-1/-1 [1] 27/-1/-1->26->31|31->26->27/-1/-1
+gpu7:14235:14310 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu8:33856:33934 [0] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu8:33856:33934 [0] NCCL INFO Trees [0] 29/-1/-1->28->31|31->28->29/-1/-1 [1] 29/-1/-1->28->31|31->28->29/-1/-1
+gpu8:33856:33934 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+node1:15611:15699 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+node1:15610:15701 [0] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node1:15610:15701 [0] NCCL INFO Trees [0] 1/-1/-1->0->3|3->0->1/-1/-1 [1] 1/-1/-1->0->3|3->0->1/-1/-1
+node1:15610:15701 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+node1:15613:15702 [3] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node1:15613:15702 [3] NCCL INFO Trees [0] 0/18/-1->3->2|2->3->0/18/-1 [1] 0/-1/-1->3->2|2->3->0/-1/-1
+node1:15613:15702 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+gpu7:14236:14307 [3] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu7:14236:14307 [3] NCCL INFO Trees [0] 24/22/30->27->26|26->27->24/22/30 [1] 24/-1/-1->27->26|26->27->24/-1/-1
+gpu7:14236:14307 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+gpu8:33858:33933 [2] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu8:33858:33933 [2] NCCL INFO Trees [0] 31/-1/-1->30->27|27->30->31/-1/-1 [1] 31/-1/-1->30->23|23->30->31/-1/-1
+gpu8:33858:33933 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu8:33857:33932 [1] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu8:33857:33932 [1] NCCL INFO Trees [0] -1/-1/-1->29->28|28->29->-1/-1/-1 [1] -1/-1/-1->29->28|28->29->-1/-1/-1
+gpu8:33857:33932 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+gpu8:33859:33935 [3] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu8:33859:33935 [3] NCCL INFO Trees [0] 28/-1/-1->31->30|30->31->28/-1/-1 [1] 28/26/2->31->30|30->31->28/26/2
+gpu8:33859:33935 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+node2:148328:148404 [3] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node2:148328:148404 [3] NCCL INFO Trees [0] 4/-1/-1->7->6|6->7->4/-1/-1 [1] 4/22/-1->7->6|6->7->4/22/-1
+node2:148328:148404 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+node3:101459:101517 [3] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node3:101459:101517 [3] NCCL INFO Trees [0] 8/6/14->11->10|10->11->8/6/14 [1] 8/-1/-1->11->10|10->11->8/-1/-1
+node3:101459:101517 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+node2:148326:148403 [1] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node2:148326:148403 [1] NCCL INFO Trees [0] -1/-1/-1->5->4|4->5->-1/-1/-1 [1] -1/-1/-1->5->4|4->5->-1/-1/-1
+node2:148326:148403 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+node3:101457:101518 [1] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node3:101457:101518 [1] NCCL INFO Trees [0] -1/-1/-1->9->8|8->9->-1/-1/-1 [1] -1/-1/-1->9->8|8->9->-1/-1/-1
+node3:101457:101518 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+gpu4:16519:16588 [0] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu4:16519:16588 [0] NCCL INFO Trees [0] 13/-1/-1->12->15|15->12->13/-1/-1 [1] 13/-1/-1->12->15|15->12->13/-1/-1
+gpu4:16519:16588 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+node2:148325:148402 [0] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node2:148325:148402 [0] NCCL INFO Trees [0] 5/-1/-1->4->7|7->4->5/-1/-1 [1] 5/-1/-1->4->7|7->4->5/-1/-1
+node2:148325:148402 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+node3:101458:101519 [2] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node3:101458:101519 [2] NCCL INFO Trees [0] 11/-1/-1->10->19|19->10->11/-1/-1 [1] 11/-1/-1->10->15|15->10->11/-1/-1
+node3:101458:101519 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu4:16521:16591 [2] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu4:16521:16591 [2] NCCL INFO Trees [0] 15/-1/-1->14->11|11->14->15/-1/-1 [1] 15/-1/-1->14->23|23->14->15/-1/-1
+gpu4:16521:16591 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+node2:148327:148401 [2] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node2:148327:148401 [2] NCCL INFO Trees [0] 7/-1/-1->6->11|11->6->7/-1/-1 [1] 7/-1/-1->6->-1|-1->6->7/-1/-1
+node2:148327:148401 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+node3:101456:101516 [0] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+node3:101456:101516 [0] NCCL INFO Trees [0] 9/-1/-1->8->11|11->8->9/-1/-1 [1] 9/-1/-1->8->11|11->8->9/-1/-1
+node3:101456:101516 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+gpu4:16520:16590 [1] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu4:16520:16590 [1] NCCL INFO Trees [0] -1/-1/-1->13->12|12->13->-1/-1/-1 [1] -1/-1/-1->13->12|12->13->-1/-1/-1
+gpu4:16520:16590 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+gpu4:16522:16589 [3] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu4:16522:16589 [3] NCCL INFO Trees [0] 12/-1/-1->15->14|14->15->12/-1/-1 [1] 12/10/18->15->14|14->15->12/10/18
+gpu4:16522:16589 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+gpu6:588:689 [1] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu6:588:689 [1] NCCL INFO Trees [0] -1/-1/-1->21->20|20->21->-1/-1/-1 [1] -1/-1/-1->21->20|20->21->-1/-1/-1
+gpu6:587:688 [0] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu6:587:688 [0] NCCL INFO Trees [0] 21/-1/-1->20->23|23->20->21/-1/-1 [1] 21/-1/-1->20->23|23->20->21/-1/-1
+gpu6:587:688 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+gpu6:589:690 [2] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu6:589:690 [2] NCCL INFO Trees [0] 23/-1/-1->22->27|27->22->23/-1/-1 [1] 23/-1/-1->22->7|7->22->23/-1/-1
+gpu6:589:690 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu5:36928:37003 [1] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu5:36928:37003 [1] NCCL INFO Trees [0] -1/-1/-1->17->16|16->17->-1/-1/-1 [1] -1/-1/-1->17->16|16->17->-1/-1/-1
+gpu5:36928:37003 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+gpu6:588:689 [1] NCCL INFO Setting affinity for GPU 1 to 3ff003ff
+gpu5:36929:37001 [2] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu5:36929:37001 [2] NCCL INFO Trees [0] 19/-1/-1->18->3|3->18->19/-1/-1 [1] 19/-1/-1->18->15|15->18->19/-1/-1
+gpu5:36929:37001 [2] NCCL INFO Setting affinity for GPU 2 to ff,c00ffc00
+gpu5:36930:37002 [3] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu5:36930:37002 [3] NCCL INFO Trees [0] 16/10/26->19->18|18->19->16/10/26 [1] 16/-1/-1->19->18|18->19->16/-1/-1
+gpu5:36930:37002 [3] NCCL INFO Setting affinity for GPU 3 to ff,c00ffc00
+gpu5:36927:37004 [0] NCCL INFO threadThresholds 8/8/64 | 256/8/64 | 8/8/64
+gpu5:36927:37004 [0] NCCL INFO Trees [0] 17/-1/-1->16->19|19->16->17/-1/-1 [1] 17/-1/-1->16->19|19->16->17/-1/-1
+gpu5:36927:37004 [0] NCCL INFO Setting affinity for GPU 0 to 3ff003ff
+node3:101458:101519 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+gpu7:14235:14310 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+gpu8:33858:33933 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+gpu8:33859:33935 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node3:101459:101517 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu7:14236:14307 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node2:148328:148404 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node1:15612:15700 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+node2:148326:148403 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+node2:148327:148401 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+node3:101457:101518 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu7:14234:14309 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu8:33857:33932 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+node1:15611:15699 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+node1:15613:15702 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu6:589:690 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+gpu5:36929:37001 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+gpu5:36928:37003 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu5:36930:37002 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu6:588:689 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+node3:101458:101519 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node3:101458:101519 [2] NCCL INFO Ring 00 : 10[b1000] -> 11[b2000] via direct shared memory
+node2:148325:148402 [0] NCCL INFO Ring 00 : 3[b2000] -> 4[3d000] [receive] via NET/IB/0
+node2:148325:148402 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node3:101456:101516 [0] NCCL INFO Ring 00 : 7[b2000] -> 8[3d000] [receive] via NET/IB/0
+node3:101456:101516 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node2:148325:148402 [0] NCCL INFO Ring 00 : 4[3d000] -> 5[3e000] via direct shared memory
+node3:101456:101516 [0] NCCL INFO Ring 00 : 8[3d000] -> 9[3e000] via direct shared memory
+gpu8:33858:33933 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu7:14233:14308 [0] NCCL INFO Ring 00 : 23[b2000] -> 24[3d000] [receive] via NET/IB/0
+gpu7:14233:14308 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu8:33858:33933 [2] NCCL INFO Ring 00 : 30[b1000] -> 31[b2000] via direct shared memory
+gpu8:33856:33934 [0] NCCL INFO Ring 00 : 27[b2000] -> 28[3d000] [receive] via NET/IB/0
+node1:15610:15701 [0] NCCL INFO Ring 00 : 31[b2000] -> 0[3d000] [receive] via NET/IB/0
+gpu7:14233:14308 [0] NCCL INFO Ring 00 : 24[3d000] -> 25[3e000] via direct shared memory
+gpu8:33856:33934 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node1:15610:15701 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu8:33856:33934 [0] NCCL INFO Ring 00 : 28[3d000] -> 29[3e000] via direct shared memory
+node1:15610:15701 [0] NCCL INFO Ring 00 : 0[3d000] -> 1[3e000] via direct shared memory
+node2:148326:148403 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+node2:148326:148403 [1] NCCL INFO Ring 00 : 5[3e000] -> 6[b1000] via direct shared memory
+gpu6:589:690 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu6:589:690 [2] NCCL INFO Ring 00 : 22[b1000] -> 23[b2000] via direct shared memory
+gpu6:587:688 [0] NCCL INFO Ring 00 : 19[b2000] -> 20[3d000] [receive] via NET/IB/0
+gpu6:587:688 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu5:36927:37004 [0] NCCL INFO Ring 00 : 15[b2000] -> 16[3d000] [receive] via NET/IB/0
+gpu5:36927:37004 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node2:148327:148401 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node2:148327:148401 [2] NCCL INFO Ring 00 : 6[b1000] -> 7[b2000] via direct shared memory
+gpu5:36927:37004 [0] NCCL INFO Ring 00 : 16[3d000] -> 17[3e000] via direct shared memory
+gpu8:33857:33932 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+gpu6:587:688 [0] NCCL INFO Ring 00 : 20[3d000] -> 21[3e000] via direct shared memory
+gpu8:33857:33932 [1] NCCL INFO Ring 00 : 29[3e000] -> 30[b1000] via direct shared memory
+node3:101457:101518 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+node3:101457:101518 [1] NCCL INFO Ring 00 : 9[3e000] -> 10[b1000] via direct shared memory
+node3:101458:101519 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu7:14235:14310 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu7:14235:14310 [2] NCCL INFO Ring 00 : 26[b1000] -> 27[b2000] via direct shared memory
+node1:15612:15700 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node1:15611:15699 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+node1:15612:15700 [2] NCCL INFO Ring 00 : 2[b1000] -> 3[b2000] via direct shared memory
+node1:15611:15699 [1] NCCL INFO Ring 00 : 1[3e000] -> 2[b1000] via direct shared memory
+gpu6:588:689 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+gpu7:14234:14309 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+gpu7:14234:14309 [1] NCCL INFO Ring 00 : 25[3e000] -> 26[b1000] via direct shared memory
+gpu6:588:689 [1] NCCL INFO Ring 00 : 21[3e000] -> 22[b1000] via direct shared memory
+gpu5:36929:37001 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node2:148326:148403 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+node2:148327:148401 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node2:148326:148403 [1] NCCL INFO Ring 00 : 5[3e000] -> 4[3d000] via direct shared memory
+node3:101457:101518 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu6:589:690 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node3:101457:101518 [1] NCCL INFO Ring 00 : 9[3e000] -> 8[3d000] via direct shared memory
+gpu5:36929:37001 [2] NCCL INFO Ring 00 : 18[b1000] -> 19[b2000] via direct shared memory
+gpu5:36928:37003 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+gpu7:14235:14310 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu6:591:691 [3] NCCL INFO Ring 00 : 23[b2000] -> 24[3d000] [send] via NET/IB/0
+gpu5:36928:37003 [1] NCCL INFO Ring 00 : 17[3e000] -> 18[b1000] via direct shared memory
+gpu8:33858:33933 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu8:33857:33932 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu8:33857:33932 [1] NCCL INFO Ring 00 : 29[3e000] -> 28[3d000] via direct shared memory
+node3:101459:101517 [3] NCCL INFO Ring 00 : 11[b2000] -> 12[3d000] [send] via NET/IB/0
+gpu8:33859:33935 [3] NCCL INFO Ring 00 : 31[b2000] -> 0[3d000] [send] via NET/IB/0
+node1:15612:15700 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node1:15611:15699 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+node1:15611:15699 [1] NCCL INFO Ring 00 : 1[3e000] -> 0[3d000] via direct shared memory
+gpu7:14234:14309 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu7:14234:14309 [1] NCCL INFO Ring 00 : 25[3e000] -> 24[3d000] via direct shared memory
+node2:148328:148404 [3] NCCL INFO Ring 00 : 7[b2000] -> 8[3d000] [send] via NET/IB/0
+gpu6:588:689 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu6:588:689 [1] NCCL INFO Ring 00 : 21[3e000] -> 20[3d000] via direct shared memory
+node1:15613:15702 [3] NCCL INFO Ring 00 : 3[b2000] -> 4[3d000] [send] via NET/IB/0
+gpu7:14236:14307 [3] NCCL INFO Ring 00 : 27[b2000] -> 28[3d000] [send] via NET/IB/0
+gpu5:36929:37001 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu5:36928:37003 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu5:36928:37003 [1] NCCL INFO Ring 00 : 17[3e000] -> 16[3d000] via direct shared memory
+gpu5:36930:37002 [3] NCCL INFO Ring 00 : 19[b2000] -> 20[3d000] [send] via NET/IB/0
+gpu6:591:691 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu8:33859:33935 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu7:14233:14308 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node2:148328:148404 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node1:15610:15701 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu7:14236:14307 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node1:15613:15702 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu8:33856:33934 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu5:36930:37002 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node3:101456:101516 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node2:148325:148402 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu4:16520:16590 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu4:16522:16589 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu4:16521:16591 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+gpu6:587:688 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node3:101458:101519 [2] NCCL INFO Ring 00 : 10[b1000] -> 19[b2000] [send] via NET/IB/0
+node2:148327:148401 [2] NCCL INFO Ring 00 : 6[b1000] -> 11[b2000] [send] via NET/IB/0
+node2:148328:148404 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu8:33859:33935 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node2:148328:148404 [3] NCCL INFO Ring 00 : 7[b2000] -> 6[b1000] via direct shared memory
+gpu8:33859:33935 [3] NCCL INFO Ring 00 : 31[b2000] -> 30[b1000] via direct shared memory
+gpu8:33858:33933 [2] NCCL INFO Ring 00 : 30[b1000] -> 27[b2000] [send] via NET/IB/0
+gpu6:591:691 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu6:591:691 [3] NCCL INFO Ring 00 : 23[b2000] -> 22[b1000] via direct shared memory
+gpu6:589:690 [2] NCCL INFO Ring 00 : 22[b1000] -> 27[b2000] [send] via NET/IB/0
+gpu7:14235:14310 [2] NCCL INFO Ring 00 : 26[b1000] -> 19[b2000] [send] via NET/IB/0
+gpu7:14233:14308 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu5:36929:37001 [2] NCCL INFO Ring 00 : 18[b1000] -> 3[b2000] [send] via NET/IB/0
+gpu7:14233:14308 [0] NCCL INFO Ring 00 : 24[3d000] -> 27[b2000] via direct shared memory
+gpu4:16519:16588 [0] NCCL INFO Ring 00 : 11[b2000] -> 12[3d000] [receive] via NET/IB/0
+gpu4:16519:16588 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu4:16519:16588 [0] NCCL INFO Ring 00 : 12[3d000] -> 13[3e000] via direct shared memory
+node1:15610:15701 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node1:15610:15701 [0] NCCL INFO Ring 00 : 0[3d000] -> 3[b2000] via direct shared memory
+node3:101456:101516 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node3:101456:101516 [0] NCCL INFO Ring 00 : 8[3d000] -> 11[b2000] via direct shared memory
+node2:148325:148402 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node2:148325:148402 [0] NCCL INFO Ring 00 : 4[3d000] -> 7[b2000] via direct shared memory
+node2:148328:148404 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node2:148328:148404 [3] NCCL INFO Ring 00 : 7[b2000] -> 4[3d000] via direct shared memory
+gpu7:14234:14309 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu8:33856:33934 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu8:33856:33934 [0] NCCL INFO Ring 00 : 28[3d000] -> 31[b2000] via direct shared memory
+gpu6:587:688 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu6:587:688 [0] NCCL INFO Ring 00 : 20[3d000] -> 23[b2000] via direct shared memory
+gpu8:33859:33935 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node2:148325:148402 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu7:14233:14308 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node3:101457:101518 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu8:33859:33935 [3] NCCL INFO Ring 00 : 31[b2000] -> 28[3d000] via direct shared memory
+gpu6:591:691 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu4:16520:16590 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+node3:101459:101517 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node1:15611:15699 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu6:591:691 [3] NCCL INFO Ring 00 : 23[b2000] -> 20[3d000] via direct shared memory
+gpu4:16520:16590 [1] NCCL INFO Ring 00 : 13[3e000] -> 14[b1000] via direct shared memory
+gpu4:16521:16591 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node2:148326:148403 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu4:16521:16591 [2] NCCL INFO Ring 00 : 14[b1000] -> 15[b2000] via direct shared memory
+gpu8:33856:33934 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node1:15610:15701 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu7:14236:14307 [3] NCCL INFO Ring 00 : 22[b1000] -> 27[b2000] [receive] via NET/IB/0
+gpu4:16520:16590 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu4:16520:16590 [1] NCCL INFO Ring 00 : 13[3e000] -> 12[3d000] via direct shared memory
+gpu8:33857:33932 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu4:16521:16591 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu6:587:688 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu6:588:689 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu4:16519:16588 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu4:16522:16589 [3] NCCL INFO Ring 00 : 15[b2000] -> 16[3d000] [send] via NET/IB/0
+node1:15613:15702 [3] NCCL INFO Ring 00 : 18[b1000] -> 3[b2000] [receive] via NET/IB/0
+gpu5:36930:37002 [3] NCCL INFO Ring 00 : 10[b1000] -> 19[b2000] [receive] via NET/IB/0
+node1:15613:15702 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node1:15613:15702 [3] NCCL INFO Ring 00 : 3[b2000] -> 2[b1000] via direct shared memory
+node1:15612:15700 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+gpu4:16522:16589 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node3:101457:101518 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+node2:148328:148404 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node3:101457:101518 [1] NCCL INFO Ring 01 : 9[3e000] -> 10[b1000] via direct shared memory
+node2:148326:148403 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+node2:148326:148403 [1] NCCL INFO Ring 01 : 5[3e000] -> 6[b1000] via direct shared memory
+gpu5:36930:37002 [3] NCCL INFO Ring 00 : 26[b1000] -> 19[b2000] [receive] via NET/IB/0
+gpu5:36930:37002 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu5:36930:37002 [3] NCCL INFO Ring 00 : 19[b2000] -> 18[b1000] via direct shared memory
+gpu7:14234:14309 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+gpu7:14234:14309 [1] NCCL INFO Ring 01 : 25[3e000] -> 26[b1000] via direct shared memory
+gpu7:14236:14307 [3] NCCL INFO Ring 00 : 30[b1000] -> 27[b2000] [receive] via NET/IB/0
+gpu4:16519:16588 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu4:16519:16588 [0] NCCL INFO Ring 00 : 12[3d000] -> 15[b2000] via direct shared memory
+gpu7:14236:14307 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu5:36927:37004 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu7:14236:14307 [3] NCCL INFO Ring 00 : 27[b2000] -> 26[b1000] via direct shared memory
+node2:148325:148402 [0] NCCL INFO Ring 01 : 3[b2000] -> 4[3d000] [receive] via NET/IB/0
+node2:148325:148402 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node2:148325:148402 [0] NCCL INFO Ring 01 : 4[3d000] -> 5[3e000] via direct shared memory
+node1:15611:15699 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+node1:15611:15699 [1] NCCL INFO Ring 01 : 1[3e000] -> 2[b1000] via direct shared memory
+gpu6:589:690 [2] NCCL INFO Ring 00 : 27[b2000] -> 22[b1000] [receive] via NET/IB/0
+node3:101456:101516 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node1:15613:15702 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node1:15613:15702 [3] NCCL INFO Ring 00 : 3[b2000] -> 0[3d000] via direct shared memory
+gpu4:16520:16590 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu4:16521:16591 [2] NCCL INFO Ring 00 : 14[b1000] -> 11[b2000] [send] via NET/IB/0
+gpu8:33859:33935 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu8:33857:33932 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+gpu8:33857:33932 [1] NCCL INFO Ring 01 : 29[3e000] -> 30[b1000] via direct shared memory
+gpu8:33856:33934 [0] NCCL INFO Ring 01 : 27[b2000] -> 28[3d000] [receive] via NET/IB/0
+node3:101459:101517 [3] NCCL INFO Ring 00 : 6[b1000] -> 11[b2000] [receive] via NET/IB/0
+gpu8:33856:33934 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu8:33856:33934 [0] NCCL INFO Ring 01 : 28[3d000] -> 29[3e000] via direct shared memory
+gpu6:588:689 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+gpu6:588:689 [1] NCCL INFO Ring 01 : 21[3e000] -> 22[b1000] via direct shared memory
+gpu6:591:691 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node1:15612:15700 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu6:587:688 [0] NCCL INFO Ring 01 : 19[b2000] -> 20[3d000] [receive] via NET/IB/0
+gpu6:587:688 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu4:16522:16589 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu6:587:688 [0] NCCL INFO Ring 01 : 20[3d000] -> 21[3e000] via direct shared memory
+node1:15610:15701 [0] NCCL INFO Ring 01 : 31[b2000] -> 0[3d000] [receive] via NET/IB/0
+gpu4:16522:16589 [3] NCCL INFO Ring 00 : 15[b2000] -> 14[b1000] via direct shared memory
+node1:15612:15700 [2] NCCL INFO Ring 01 : 2[b1000] -> 3[b2000] via direct shared memory
+node1:15610:15701 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu7:14235:14310 [2] NCCL INFO Ring 00 : 19[b2000] -> 26[b1000] [receive] via NET/IB/0
+node1:15610:15701 [0] NCCL INFO Ring 01 : 0[3d000] -> 1[3e000] via direct shared memory
+node3:101459:101517 [3] NCCL INFO Ring 00 : 14[b1000] -> 11[b2000] [receive] via NET/IB/0
+gpu7:14236:14307 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu7:14236:14307 [3] NCCL INFO Ring 00 : 27[b2000] -> 24[3d000] via direct shared memory
+node3:101459:101517 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node1:15613:15702 [3] NCCL INFO Ring 00 : 3[b2000] -> 18[b1000] [send] via NET/IB/0
+node1:15611:15699 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+node1:15611:15699 [1] NCCL INFO Ring 01 : 1[3e000] -> 0[3d000] via direct shared memory
+node3:101459:101517 [3] NCCL INFO Ring 00 : 11[b2000] -> 10[b1000] via direct shared memory
+gpu4:16520:16590 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+gpu4:16519:16588 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu4:16522:16589 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu4:16520:16590 [1] NCCL INFO Ring 01 : 13[3e000] -> 14[b1000] via direct shared memory
+gpu4:16522:16589 [3] NCCL INFO Ring 00 : 15[b2000] -> 12[3d000] via direct shared memory
+gpu8:33858:33933 [2] NCCL INFO Ring 00 : 27[b2000] -> 30[b1000] [receive] via NET/IB/0
+node2:148328:148404 [3] NCCL INFO Ring 01 : 7[b2000] -> 8[3d000] [send] via NET/IB/0
+node2:148327:148401 [2] NCCL INFO Ring 00 : 11[b2000] -> 6[b1000] [receive] via NET/IB/0
+gpu7:14236:14307 [3] NCCL INFO Ring 00 : 27[b2000] -> 22[b1000] [send] via NET/IB/0
+gpu4:16521:16591 [2] NCCL INFO Ring 00 : 11[b2000] -> 14[b1000] [receive] via NET/IB/0
+node3:101458:101519 [2] NCCL INFO Ring 00 : 19[b2000] -> 10[b1000] [receive] via NET/IB/0
+gpu7:14233:14308 [0] NCCL INFO Ring 01 : 23[b2000] -> 24[3d000] [receive] via NET/IB/0
+gpu7:14233:14308 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu7:14233:14308 [0] NCCL INFO Ring 01 : 24[3d000] -> 25[3e000] via direct shared memory
+gpu8:33859:33935 [3] NCCL INFO Ring 01 : 31[b2000] -> 0[3d000] [send] via NET/IB/0
+node3:101459:101517 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu6:591:691 [3] NCCL INFO Ring 01 : 23[b2000] -> 24[3d000] [send] via NET/IB/0
+node3:101459:101517 [3] NCCL INFO Ring 00 : 11[b2000] -> 8[3d000] via direct shared memory
+gpu4:16522:16589 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu7:14236:14307 [3] NCCL INFO Ring 00 : 27[b2000] -> 30[b1000] [send] via NET/IB/0
+node1:15610:15701 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu7:14233:14308 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node3:101459:101517 [3] NCCL INFO Ring 00 : 11[b2000] -> 6[b1000] [send] via NET/IB/0
+gpu4:16519:16588 [0] NCCL INFO Ring 01 : 11[b2000] -> 12[3d000] [receive] via NET/IB/0
+gpu4:16519:16588 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu4:16519:16588 [0] NCCL INFO Ring 01 : 12[3d000] -> 13[3e000] via direct shared memory
+node3:101456:101516 [0] NCCL INFO Ring 01 : 7[b2000] -> 8[3d000] [receive] via NET/IB/0
+node3:101456:101516 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node3:101456:101516 [0] NCCL INFO Ring 01 : 8[3d000] -> 9[3e000] via direct shared memory
+node3:101459:101517 [3] NCCL INFO Ring 00 : 11[b2000] -> 14[b1000] [send] via NET/IB/0
+gpu6:589:690 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+node3:101456:101516 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu4:16522:16589 [3] NCCL INFO Ring 01 : 15[b2000] -> 16[3d000] [send] via NET/IB/0
+gpu7:14236:14307 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu7:14233:14308 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node1:15610:15701 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu7:14233:14308 [0] NCCL INFO Ring 01 : 24[3d000] -> 27[b2000] via direct shared memory
+node1:15610:15701 [0] NCCL INFO Ring 01 : 0[3d000] -> 3[b2000] via direct shared memory
+gpu8:33858:33933 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+node2:148327:148401 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+node3:101459:101517 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node1:15611:15699 [1] NCCL INFO comm 0x7fe3e4000b60 rank 1 nranks 32 cudaDev 1 busId 3e000 - Init COMPLETE
+gpu4:16521:16591 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+node3:101456:101516 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node3:101456:101516 [0] NCCL INFO Ring 01 : 8[3d000] -> 11[b2000] via direct shared memory
+gpu6:589:690 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu6:589:690 [2] NCCL INFO Ring 01 : 22[b1000] -> 23[b2000] via direct shared memory
+gpu6:591:691 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu6:589:690 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu6:588:689 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu6:588:689 [1] NCCL INFO Ring 01 : 21[3e000] -> 20[3d000] via direct shared memory
+gpu4:16521:16591 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu4:16521:16591 [2] NCCL INFO Ring 01 : 14[b1000] -> 15[b2000] via direct shared memory
+gpu8:33858:33933 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu8:33858:33933 [2] NCCL INFO Ring 01 : 30[b1000] -> 31[b2000] via direct shared memory
+gpu8:33859:33935 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu4:16521:16591 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node2:148327:148401 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu8:33858:33933 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node2:148327:148401 [2] NCCL INFO Ring 01 : 6[b1000] -> 7[b2000] via direct shared memory
+gpu4:16520:16590 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu4:16520:16590 [1] NCCL INFO Ring 01 : 13[3e000] -> 12[3d000] via direct shared memory
+gpu5:36927:37004 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node2:148328:148404 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu5:36927:37004 [0] NCCL INFO Ring 00 : 16[3d000] -> 19[b2000] via direct shared memory
+gpu5:36929:37001 [2] NCCL INFO Ring 00 : 3[b2000] -> 18[b1000] [receive] via NET/IB/0
+gpu8:33857:33932 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu8:33857:33932 [1] NCCL INFO Ring 01 : 29[3e000] -> 28[3d000] via direct shared memory
+node2:148327:148401 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu7:14236:14307 [3] NCCL INFO Ring 01 : 27[b2000] -> 28[3d000] [send] via NET/IB/0
+node3:101459:101517 [3] NCCL INFO Ring 01 : 11[b2000] -> 12[3d000] [send] via NET/IB/0
+node2:148326:148403 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+node2:148326:148403 [1] NCCL INFO Ring 01 : 5[3e000] -> 4[3d000] via direct shared memory
+gpu5:36928:37003 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu5:36927:37004 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node1:15613:15702 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu5:36929:37001 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+gpu5:36930:37002 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu8:33856:33934 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu5:36930:37002 [3] NCCL INFO Ring 00 : 19[b2000] -> 16[3d000] via direct shared memory
+gpu4:16519:16588 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu6:589:690 [2] NCCL INFO Ring 01 : 22[b1000] -> 7[b2000] [send] via NET/IB/0
+gpu4:16521:16591 [2] NCCL INFO Ring 01 : 14[b1000] -> 23[b2000] [send] via NET/IB/0
+gpu6:591:691 [3] NCCL INFO Ring 01 : 14[b1000] -> 23[b2000] [receive] via NET/IB/0
+gpu8:33858:33933 [2] NCCL INFO Ring 01 : 30[b1000] -> 23[b2000] [send] via NET/IB/0
+gpu5:36930:37002 [3] NCCL INFO Ring 00 : 19[b2000] -> 10[b1000] [send] via NET/IB/0
+gpu5:36928:37003 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 2(=b1000)
+gpu5:36928:37003 [1] NCCL INFO Ring 01 : 17[3e000] -> 18[b1000] via direct shared memory
+gpu8:33859:33935 [3] NCCL INFO Ring 01 : 26[b1000] -> 31[b2000] [receive] via NET/IB/0
+node2:148328:148404 [3] NCCL INFO Ring 01 : 22[b1000] -> 7[b2000] [receive] via NET/IB/0
+node2:148328:148404 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node2:148328:148404 [3] NCCL INFO Ring 01 : 7[b2000] -> 6[b1000] via direct shared memory
+gpu6:591:691 [3] NCCL INFO Ring 01 : 30[b1000] -> 23[b2000] [receive] via NET/IB/0
+node2:148327:148401 [2] NCCL INFO comm 0x7efcd4000b60 rank 6 nranks 32 cudaDev 2 busId b1000 - Init COMPLETE
+gpu6:591:691 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu6:591:691 [3] NCCL INFO Ring 01 : 23[b2000] -> 22[b1000] via direct shared memory
+gpu4:16519:16588 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu4:16519:16588 [0] NCCL INFO Ring 01 : 12[3d000] -> 15[b2000] via direct shared memory
+gpu5:36929:37001 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu5:36929:37001 [2] NCCL INFO Ring 01 : 18[b1000] -> 19[b2000] via direct shared memory
+gpu8:33856:33934 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu8:33856:33934 [0] NCCL INFO Ring 01 : 28[3d000] -> 31[b2000] via direct shared memory
+node1:15612:15700 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu8:33859:33935 [3] NCCL INFO Ring 01 : 2[b1000] -> 31[b2000] [receive] via NET/IB/0
+gpu8:33859:33935 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu4:16520:16590 [1] NCCL INFO comm 0x7ff770000b60 rank 13 nranks 32 cudaDev 1 busId 3e000 - Init COMPLETE
+gpu8:33859:33935 [3] NCCL INFO Ring 01 : 31[b2000] -> 30[b1000] via direct shared memory
+node1:15613:15702 [3] NCCL INFO Ring 01 : 3[b2000] -> 4[3d000] [send] via NET/IB/0
+gpu8:33856:33934 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu5:36930:37002 [3] NCCL INFO Ring 00 : 19[b2000] -> 26[b1000] [send] via NET/IB/0
+gpu8:33857:33932 [1] NCCL INFO comm 0x7f5af4000b60 rank 29 nranks 32 cudaDev 1 busId 3e000 - Init COMPLETE
+gpu5:36927:37004 [0] NCCL INFO Ring 01 : 15[b2000] -> 16[3d000] [receive] via NET/IB/0
+gpu5:36927:37004 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu5:36927:37004 [0] NCCL INFO Ring 01 : 16[3d000] -> 17[3e000] via direct shared memory
+gpu6:589:690 [2] NCCL INFO Ring 01 : 7[b2000] -> 22[b1000] [receive] via NET/IB/0
+gpu5:36928:37003 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+node1:15613:15702 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu5:36928:37003 [1] NCCL INFO Ring 01 : 17[3e000] -> 16[3d000] via direct shared memory
+gpu4:16522:16589 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node2:148325:148402 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+gpu8:33858:33933 [2] NCCL INFO Ring 01 : 23[b2000] -> 30[b1000] [receive] via NET/IB/0
+gpu5:36927:37004 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node3:101458:101519 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+node1:15613:15702 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node1:15613:15702 [3] NCCL INFO Ring 01 : 3[b2000] -> 2[b1000] via direct shared memory
+gpu5:36930:37002 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node1:15613:15702 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node1:15613:15702 [3] NCCL INFO Ring 01 : 3[b2000] -> 0[3d000] via direct shared memory
+gpu7:14235:14310 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 1(=3e000)
+node2:148325:148402 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node2:148325:148402 [0] NCCL INFO Ring 01 : 4[3d000] -> 7[b2000] via direct shared memory
+node1:15612:15700 [2] NCCL INFO Ring 01 : 2[b1000] -> 31[b2000] [send] via NET/IB/0
+node1:15610:15701 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu5:36927:37004 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu5:36927:37004 [0] NCCL INFO Ring 01 : 16[3d000] -> 19[b2000] via direct shared memory
+node2:148325:148402 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node2:148326:148403 [1] NCCL INFO comm 0x7f4acc000b60 rank 5 nranks 32 cudaDev 1 busId 3e000 - Init COMPLETE
+node2:148328:148404 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node2:148328:148404 [3] NCCL INFO Ring 01 : 7[b2000] -> 4[3d000] via direct shared memory
+gpu4:16519:16588 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node3:101458:101519 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node3:101458:101519 [2] NCCL INFO Ring 01 : 10[b1000] -> 11[b2000] via direct shared memory
+gpu5:36928:37003 [1] NCCL INFO comm 0x7f875c000b60 rank 17 nranks 32 cudaDev 1 busId 3e000 - Init COMPLETE
+node3:101459:101517 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu4:16522:16589 [3] NCCL INFO Ring 01 : 10[b1000] -> 15[b2000] [receive] via NET/IB/0
+node3:101458:101519 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node3:101457:101518 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+node3:101457:101518 [1] NCCL INFO Ring 01 : 9[3e000] -> 8[3d000] via direct shared memory
+node1:15612:15700 [2] NCCL INFO Ring 01 : 31[b2000] -> 2[b1000] [receive] via NET/IB/0
+node2:148325:148402 [0] NCCL INFO comm 0x7f9760000b60 rank 4 nranks 32 cudaDev 0 busId 3d000 - Init COMPLETE
+gpu5:36929:37001 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu4:16522:16589 [3] NCCL INFO Ring 01 : 18[b1000] -> 15[b2000] [receive] via NET/IB/0
+gpu4:16522:16589 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu7:14235:14310 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+gpu7:14235:14310 [2] NCCL INFO Ring 01 : 26[b1000] -> 27[b2000] via direct shared memory
+gpu4:16522:16589 [3] NCCL INFO Ring 01 : 15[b2000] -> 14[b1000] via direct shared memory
+node1:15610:15701 [0] NCCL INFO comm 0x7f39b0000b60 rank 0 nranks 32 cudaDev 0 busId 3d000 - Init COMPLETE
+node3:101457:101518 [1] NCCL INFO comm 0x7f6920000b60 rank 9 nranks 32 cudaDev 1 busId 3e000 - Init COMPLETE
+gpu7:14236:14307 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu5:36930:37002 [3] NCCL INFO Ring 01 : 19[b2000] -> 20[3d000] [send] via NET/IB/0
+node2:148328:148404 [3] NCCL INFO Ring 01 : 7[b2000] -> 22[b1000] [send] via NET/IB/0
+#
+#                                                     out-of-place                       in-place          
+#       size         count    type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                     (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+node1:15610:15610 [0] NCCL INFO Launch mode Parallel
+gpu7:14235:14310 [2] NCCL INFO Could not enable P2P between dev 2(=b1000) and dev 3(=b2000)
+node1:15613:15702 [3] NCCL INFO comm 0x7f4ee4000b60 rank 3 nranks 32 cudaDev 3 busId b2000 - Init COMPLETE
+gpu5:36930:37002 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu7:14234:14309 [1] NCCL INFO Could not enable P2P between dev 1(=3e000) and dev 0(=3d000)
+gpu7:14234:14309 [1] NCCL INFO Ring 01 : 25[3e000] -> 24[3d000] via direct shared memory
+node3:101459:101517 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+node3:101459:101517 [3] NCCL INFO Ring 01 : 11[b2000] -> 10[b1000] via direct shared memory
+gpu6:587:688 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 1(=3e000)
+node2:148328:148404 [3] NCCL INFO comm 0x7ff120000b60 rank 7 nranks 32 cudaDev 3 busId b2000 - Init COMPLETE
+node3:101458:101519 [2] NCCL INFO Ring 01 : 10[b1000] -> 15[b2000] [send] via NET/IB/0
+node3:101459:101517 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+node3:101459:101517 [3] NCCL INFO Ring 01 : 11[b2000] -> 8[3d000] via direct shared memory
+gpu4:16521:16591 [2] NCCL INFO Ring 01 : 23[b2000] -> 14[b1000] [receive] via NET/IB/0
+gpu6:589:690 [2] NCCL INFO comm 0x7fb8e8000b60 rank 22 nranks 32 cudaDev 2 busId b1000 - Init COMPLETE
+gpu7:14234:14309 [1] NCCL INFO comm 0x7f67b8000b60 rank 25 nranks 32 cudaDev 1 busId 3e000 - Init COMPLETE
+node3:101456:101516 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu5:36930:37002 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu5:36930:37002 [3] NCCL INFO Ring 01 : 19[b2000] -> 18[b1000] via direct shared memory
+gpu5:36930:37002 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu5:36930:37002 [3] NCCL INFO Ring 01 : 19[b2000] -> 16[3d000] via direct shared memory
+gpu7:14236:14307 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 2(=b1000)
+gpu7:14236:14307 [3] NCCL INFO Ring 01 : 27[b2000] -> 26[b1000] via direct shared memory
+gpu7:14235:14310 [2] NCCL INFO Ring 01 : 26[b1000] -> 31[b2000] [send] via NET/IB/0
+gpu5:36927:37004 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu5:36929:37001 [2] NCCL INFO Ring 01 : 18[b1000] -> 15[b2000] [send] via NET/IB/0
+gpu6:587:688 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu6:587:688 [0] NCCL INFO Ring 01 : 20[3d000] -> 23[b2000] via direct shared memory
+gpu7:14236:14307 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu7:14236:14307 [3] NCCL INFO Ring 01 : 27[b2000] -> 24[3d000] via direct shared memory
+node3:101456:101516 [0] NCCL INFO comm 0x7fcb3c000b60 rank 8 nranks 32 cudaDev 0 busId 3d000 - Init COMPLETE
+node3:101458:101519 [2] NCCL INFO Ring 01 : 15[b2000] -> 10[b1000] [receive] via NET/IB/0
+gpu7:14233:14308 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+gpu6:587:688 [0] NCCL INFO Could not enable P2P between dev 0(=3d000) and dev 3(=b2000)
+node3:101459:101517 [3] NCCL INFO comm 0x7ff618000b60 rank 11 nranks 32 cudaDev 3 busId b2000 - Init COMPLETE
+gpu4:16522:16589 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu4:16522:16589 [3] NCCL INFO Ring 01 : 15[b2000] -> 12[3d000] via direct shared memory
+gpu6:588:689 [1] NCCL INFO comm 0x7ffa4c000b60 rank 21 nranks 32 cudaDev 1 busId 3e000 - Init COMPLETE
+gpu4:16519:16588 [0] NCCL INFO comm 0x7f9bbc000b60 rank 12 nranks 32 cudaDev 0 busId 3d000 - Init COMPLETE
+gpu8:33859:33935 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu8:33859:33935 [3] NCCL INFO Ring 01 : 31[b2000] -> 28[3d000] via direct shared memory
+gpu6:591:691 [3] NCCL INFO Could not enable P2P between dev 3(=b2000) and dev 0(=3d000)
+gpu6:591:691 [3] NCCL INFO Ring 01 : 23[b2000] -> 20[3d000] via direct shared memory
+gpu8:33856:33934 [0] NCCL INFO comm 0x7fb920000b60 rank 28 nranks 32 cudaDev 0 busId 3d000 - Init COMPLETE
+gpu7:14235:14310 [2] NCCL INFO Ring 01 : 31[b2000] -> 26[b1000] [receive] via NET/IB/0
+gpu5:36929:37001 [2] NCCL INFO Ring 01 : 15[b2000] -> 18[b1000] [receive] via NET/IB/0
+gpu4:16522:16589 [3] NCCL INFO Ring 01 : 15[b2000] -> 10[b1000] [send] via NET/IB/0
+gpu8:33859:33935 [3] NCCL INFO Ring 01 : 31[b2000] -> 26[b1000] [send] via NET/IB/0
+gpu5:36927:37004 [0] NCCL INFO comm 0x7fe460000b60 rank 16 nranks 32 cudaDev 0 busId 3d000 - Init COMPLETE
+gpu6:587:688 [0] NCCL INFO comm 0x7fa128000b60 rank 20 nranks 32 cudaDev 0 busId 3d000 - Init COMPLETE
+gpu6:591:691 [3] NCCL INFO Ring 01 : 23[b2000] -> 14[b1000] [send] via NET/IB/0
+gpu5:36930:37002 [3] NCCL INFO comm 0x7f26e0000b60 rank 19 nranks 32 cudaDev 3 busId b2000 - Init COMPLETE
+gpu7:14233:14308 [0] NCCL INFO comm 0x7f706c000b60 rank 24 nranks 32 cudaDev 0 busId 3d000 - Init COMPLETE
+gpu7:14236:14307 [3] NCCL INFO comm 0x7f1c3c000b60 rank 27 nranks 32 cudaDev 3 busId b2000 - Init COMPLETE
+gpu4:16522:16589 [3] NCCL INFO Ring 01 : 15[b2000] -> 18[b1000] [send] via NET/IB/0
+gpu8:33859:33935 [3] NCCL INFO Ring 01 : 31[b2000] -> 2[b1000] [send] via NET/IB/0
+gpu6:591:691 [3] NCCL INFO Ring 01 : 23[b2000] -> 30[b1000] [send] via NET/IB/0
+node3:101458:101519 [2] NCCL INFO comm 0x7f2390000b60 rank 10 nranks 32 cudaDev 2 busId b1000 - Init COMPLETE
+gpu4:16522:16589 [3] NCCL INFO comm 0x7fc7a8000b60 rank 15 nranks 32 cudaDev 3 busId b2000 - Init COMPLETE
+gpu7:14235:14310 [2] NCCL INFO comm 0x7fe838000b60 rank 26 nranks 32 cudaDev 2 busId b1000 - Init COMPLETE
+gpu5:36929:37001 [2] NCCL INFO comm 0x7fd9fc000b60 rank 18 nranks 32 cudaDev 2 busId b1000 - Init COMPLETE
+gpu8:33859:33935 [3] NCCL INFO comm 0x7f66a4000b60 rank 31 nranks 32 cudaDev 3 busId b2000 - Init COMPLETE
+gpu4:16521:16591 [2] NCCL INFO comm 0x7f49a0000b60 rank 14 nranks 32 cudaDev 2 busId b1000 - Init COMPLETE
+node1:15612:15700 [2] NCCL INFO comm 0x7fed04000b60 rank 2 nranks 32 cudaDev 2 busId b1000 - Init COMPLETE
+gpu6:591:691 [3] NCCL INFO comm 0x7f8f74000b60 rank 23 nranks 32 cudaDev 3 busId b2000 - Init COMPLETE
+gpu8:33858:33933 [2] NCCL INFO comm 0x7f4de8000b60 rank 30 nranks 32 cudaDev 2 busId b1000 - Init COMPLETE
+     1048576        262144   float     sum    734.4    1.43    2.77  1e-06    725.1    1.45    2.80  1e-06
+     2097152        524288   float     sum   1073.5    1.95    3.78  1e-06   1073.8    1.95    3.78  1e-06
+     4194304       1048576   float     sum   1764.1    2.38    4.61  1e-06   1763.1    2.38    4.61  1e-06
+     8388608       2097152   float     sum   3075.8    2.73    5.28  1e-06   3074.9    2.73    5.29  1e-06
+    16777216       4194304   float     sum   5983.2    2.80    5.43  1e-06   6857.9    2.45    4.74  1e-06
+    33554432       8388608   float     sum    11855    2.83    5.48  1e-06    11876    2.83    5.47  1e-06
+    67108864      16777216   float     sum    23709    2.83    5.48  1e-06    23717    2.83    5.48  1e-06
+   134217728      33554432   float     sum    47314    2.84    5.50  1e-06    47269    2.84    5.50  1e-06
+   268435456      67108864   float     sum    94479    2.84    5.50  1e-06    94515    2.84    5.50  1e-06
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.83472 
+#
