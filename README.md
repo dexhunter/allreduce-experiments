@@ -4,24 +4,20 @@
 
 Implementation of different allreduce algorithms
 
-* [x] Reduce + Broadcast
-* [ ] All-to-all Communication
-* [x] Recursive Doubling
-* [ ] Recursive Halving
-* [x] Rabenseifner's Algorithm
-* [ ] Butterfly
-* [ ] 2D Mesh
-* [ ] 2D Torus
-* [ ] 3D Torus
-* [x] Ring
-* [ ] Binary Double Tree
-
+* basic_linear
+* nonoverlapping
+* recursive_doubling
+* ring
+* segmented_ring
+* rabenseifner
 
 ## NCCL Test
 
+* ring
+
 ## Horovod
 
-* NCCL_ALLREDUCE
+* [NCCL_ALLREDUCE](./impl/horovod/NCCL_ALLREDUCE.cc)
 * MPI_ALLREDUCE
 * NCCL_REDUCESCATTER+MPI_ALLREDUCE+NCCL_ALLGATHER
 * NCCL_REDUCE+MPI_ALLREDUCE+NCCL_BCAST
