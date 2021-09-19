@@ -47,21 +47,21 @@ Implementation of different allreduce algorithms
 
 * Results on server 9096
     * 10g 
-        * [2cpu](data/ompi-results/new-cluster/10g/2cpu)
-        * [4cpu](data/ompi-results/new-cluster/10g/4cpu)
-        * [8cpu](data/ompi-results/new-cluster/10g/8cpu)
-        * [16cpu](data/ompi-results/new-cluster/10g/16cpu)
+        * [2cpu](./data/ompi-results/new-cluster/10g/2cpu)
+        * [4cpu](./data/ompi-results/new-cluster/10g/4cpu)
+        * [8cpu](./data/ompi-results/new-cluster/10g/8cpu)
+        * [16cpu](./data/ompi-results/new-cluster/10g/16cpu)
     * 100g
-        * [2cpu](data/ompi-results/new-cluster/100g/2cpu)
-        * [4cpu](data/ompi-results/new-cluster/100g/4cpu)
-        * [8cpu](data/ompi-results/new-cluster/100g/8cpu)
-        * [16cpu](data/ompi-results/new-cluster/100g/16cpu)
+        * [2cpu](./data/ompi-results/new-cluster/100g/2cpu)
+        * [4cpu](./data/ompi-results/new-cluster/100g/4cpu)
+        * [8cpu](./data/ompi-results/new-cluster/100g/8cpu)
+        * [16cpu](./data/ompi-results/new-cluster/100g/16cpu)
 
 #### GPU
 
-* [10G Network 16GPU](data/ompi-results/gpus/10g)
+* [10G Network 16GPU](./data/ompi-results/gpus/10g)
     * step from 1k to 2m
-* [100G Network 16GPU](data/ompi-results/gpus/100g)
+* [100G Network 16GPU](./data/ompi-results/gpus/100g)
     * step from 1k to 2m
 * [10G Network 32GPU](./data/ompi-results/ompi-32gpu-results/32gpus/10g)
     * step 2^n
@@ -70,15 +70,33 @@ Implementation of different allreduce algorithms
 
 ### NCCL Test
 
-* [10G Network 32GPU](data/nccl-results/nccl-32gpus/10g)
-* [100G Network 32GPU](data/nccl-results/nccl-32gpus/100g)
+* [10G Network 32GPU](./data/nccl-results/nccl-32gpus/10g)
+* [100G Network 32GPU](./data/nccl-results/nccl-32gpus/100g)
 
 
 ### Horovod
 
-* [10G Network 32GPU](data/horovod-results/32gpu/10g)
-* [100G Network 32GPU](data/horovod-results/32gpu/100g)
+* [10G Network 32GPU](./data/horovod-results/32gpu/10g)
+* [100G Network 32GPU](./data/horovod-results/32gpu/100g)
 
 ## Experiment Results (Graphics)
 
-* Source code can be found at notebooks
+* **Source code & more plots can be found at notebooks**
+
+
+### Open MPI
+
+![](./imgs/ompi/ompi-1.PNG)
+![](./imgs/ompi/ompi-2.PNG)
+![](./imgs/ompi/ompi-3.PNG)
+![](./imgs/ompi/ompi-4.PNG)
+
+### NCCL
+
+![](./imgs/nccl/nccl-1.PNG)
+![](./imgs/nccl/nccl-2.PNG)
+
+### Horovod
+
+![](./imgs/horovod/horovod-1.PNG)
+![](./imgs/horovod/horovod-2.PNG)
