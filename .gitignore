@@ -200,4 +200,4 @@ openmpi-4.1.0
 gloo
 
 # ignore horovod
-horovod
+horovod/
